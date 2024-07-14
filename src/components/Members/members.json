@@ -1,0 +1,49 @@
+{
+    "members":[
+        {
+            "firstname": "Jacek",
+            "lastName": "Jeczeń",
+            "role": "Przewodniczący",
+            "describtion": "",
+            "projects": ["project1", "project2"],
+            "image": "imageurl",
+            "number": 0
+        },
+        {
+            "firstname": "Jacek",
+            "lastName": "Jeczeń",
+            "role": "Przewodniczący",
+            "describtion": "",
+            "projects": ["project1", "project2"],
+            "image": "imageurl",
+            "number": 1
+        },
+        {
+            "firstname": "Jacek",
+            "lastName": "Jeczeń",
+            "role": "Przewodniczący",
+            "describtion": "",
+            "projects": ["project1", "project2"],
+            "image": "imageurl",
+            "number": 2
+        },
+        {
+            "firstname": "Jacek",
+            "lastName": "Jeczeń",
+            "role": "Przewodniczący",
+            "describtion": "",
+            "projects": ["project1", "project2"],
+            "image": "imageurl",
+            "number": 3
+        },
+        {
+            "firstname": "Jacek",
+            "lastName": "Jeczeń",
+            "role": "Przewodniczący",
+            "describtion": "",
+            "projects": ["project1", "project2"],
+            "image": "imageurl",
+            "number": 4
+        }
+]
+}

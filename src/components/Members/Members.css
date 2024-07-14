@@ -1,0 +1,23 @@
+.member-card {
+  border: solid black 2px;
+  width: 400px;
+  height: 400px;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.members-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.member-card-image {
+  width: 150px;
+  height: 150px;
+  border: solid black 2px;
+}

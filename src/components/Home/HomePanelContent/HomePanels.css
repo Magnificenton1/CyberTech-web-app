@@ -1,0 +1,86 @@
+.home-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  
+    padding: 20px;
+    padding-top: 80px;
+    border: solid pink 1px;
+    height: 900px;
+  }
+  .home-half-container {
+    flex: 1 1 45%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    border: solid red 1px;
+  }
+  
+  .home-panel {
+    border: 1px solid #000;
+
+  }
+  /* musi tak być bo inaczej jest rozmazane podczas poruszania się, a tak to jest tylko podczas hover */
+  .home-panel:hover{
+    transition: transform 0.1s linear;
+    will-change: transform;
+  } 
+  
+  .home-panel1 {
+    flex: 1 1 90%;
+    height: 400px;
+    margin-right: 40px;
+    margin-left: 50px;
+  }
+  
+  .home-panel2 {
+    flex: 1 1 45%;
+    height: 450px;
+    margin-top: 100px;
+  }
+  
+  .home-panel3 {
+    flex: 1 1 90%;
+    height: 250px;
+    margin-top: -40px;
+    margin-right: 80px;
+    margin-left: 250px;
+
+  }
+  .panel-container{
+    height: 100%;
+    width: 100%;
+    border: solid orange 2px;
+  }
+  @media (max-width: 1200px) {
+    .home-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+  
+      padding: 20px;
+      border: solid pink 1px;
+      height: 1200px;
+    }
+  
+    .home-panel1{
+      flex: 1 1 95%;
+      margin: 10px 0;
+      margin-right: 0px;
+    }
+    .home-panel2{
+      margin-top: 0px;
+      margin-left: 0px;
+      flex: 1 1 95%;
+      margin: 10px 0;
+    }
+    .home-panel3{
+      margin-top: 0px;
+      flex: 1 1 95%;
+      margin: 10px 0;
+      margin-right: 0px;
+      margin-left: 0;
+  
+    }
+  }
