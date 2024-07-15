@@ -5,6 +5,7 @@ import {
 import { WindowTab } from "./WindowTab";
 import "./HomePanels.css";
 import { memo, useState } from "react";
+import { ProjectsPanel } from "./ProjectsPanel/ProjectsPanel";
 
 export const HomeParallaxComponent = () => {
   // MEMOIZATION - optymalizacja!
@@ -90,6 +91,7 @@ export const HomeParallaxComponent = () => {
             onMouseLeave={handleParallaxMouseLeave(1)}
           >
             <MemoizedWindowTab text={"Nasze projekty"} />
+            <ProjectsPanel/>
           </div>
         </MouseParallaxChild>
       </div>

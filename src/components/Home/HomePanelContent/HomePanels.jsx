@@ -1,10 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, memo } from "react";
 import { WindowTab } from "./WindowTab";
 import "./HomePanels.css";
 import { HomeParallax } from "./HomeParallax";
+import { ProjectsPanel } from "./ProjectsPanel/ProjectsPanel";
 
 export const HomePanels = () => {
   const [, setWindowWidth] = useState(window.innerWidth);
+  const MemoizedWindowTab = memo(WindowTab);
   useEffect(() => {
     // updatuje zmianę okna dynamicznie - potrzebne jeśli zmieniamy strukture divów
     const handleResize = () => {
@@ -26,13 +28,14 @@ export const HomePanels = () => {
     return (
       <div className="home-container">
         <div className="home-panel home-panel1">
-          <WindowTab text={"Informacje o nas"} />
+          <MemoizedWindowTab text={"Informacje o nas"} />
         </div>
         <div className="home-panel home-panel2">
-          <WindowTab text={"Nasze projekty"} />
+          <MemoizedWindowTab text={"Nasze projekty"} />
+          <ProjectsPanel/>
         </div>
         <div className="home-panel home-panel3">
-          <WindowTab text={"Dołącz do nas"} />
+          <MemoizedWindowTab text={"Dołącz do nas"} />
         </div>
       </div>
     );
