@@ -12,6 +12,12 @@ nav {
   background-color: white;
   z-index: 1000;
 }
+.cybertech-title{
+  /* color: white; */
+  margin-left: 5%;
+  font-family: myFont;
+  font-size: 25px;
+}
 nav ul {
   display: flex;
   flex-direction: row;
@@ -27,7 +33,7 @@ nav ul li a {
   justify-content: center;
   text-decoration: none;
   text-align: center;
-  width: 96px;
+  width: 110px;
   height: 60px;
   border-right: solid black 1px;
   font-size: larger;

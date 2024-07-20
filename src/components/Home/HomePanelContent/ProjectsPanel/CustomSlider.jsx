@@ -1,97 +1,119 @@
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect} from "react";
 import PropTypes from 'prop-types';
 
 import "./CustomSlider.css";
+// SLIDER NOT MADE BY ME - https://codesandbox.io/s/reactjs-image-slider-h628v?file=/src/App.js
+// i just tweaked it and added props validation
 function CustomSlider({ children }) {
-    const [activeIndex, setActiveIndex] = useState(0);
-    const [isSliding, setIsSliding] = useState(true);
-    const timerRef = useRef(null);
-  
-    const slideNext = useCallback(() => {
-      setActiveIndex((prevIndex) => (prevIndex >= children.length - 1 ? 0 : prevIndex + 1));
-    }, [children.length]);
-  
-    const slidePrev = useCallback(() => {
-      setActiveIndex((prevIndex) => (prevIndex <= 0 ? children.length - 1 : prevIndex - 1));
-    }, [children.length]);
-  
-    useEffect(() => {
-      if (isSliding) {
-        timerRef.current = setTimeout(() => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [slideDone, setSlideDone] = useState(true);
+  const [timeID, setTimeID] = useState(null);
+
+  useEffect(() => {
+    if (slideDone) {
+      setSlideDone(false);
+      setTimeID(
+        setTimeout(() => {
           slideNext();
-        }, 5000);
+          setSlideDone(true);
+        }, 7000)
+      );
+    }
+  }, [slideDone]);
+
+  const slideNext = () => {
+    setActiveIndex((val) => {
+      if (val >= children.length - 1) {
+        return 0;
+      } else {
+        return val + 1;
       }
-  
-      return () => {
-        if (timerRef.current) {
-          clearTimeout(timerRef.current);
-        }
-      };
-    }, [isSliding, slideNext]);
-  
-    const stopAutoPlay = () => {
-      if (timerRef.current) {
-        clearTimeout(timerRef.current);
+    });
+  };
+
+  const slidePrev = () => {
+    setActiveIndex((val) => {
+      if (val <= 0) {
+        return children.length - 1;
+      } else {
+        return val - 1;
       }
-      setIsSliding(false);
-    };
-  
-    const startAutoPlay = () => {
-      setIsSliding(true);
-    };
-  
-    return (
-      <div
-        className="container-slider"
-        onMouseEnter={stopAutoPlay}
-        onMouseLeave={startAutoPlay}
-      >
-        {children.map((item, index) => (
+    });
+  };
+
+  const AutoPlayStop = () => {
+    if (timeID > 0) {
+      clearTimeout(timeID);
+      setSlideDone(false);
+    }
+  };
+
+  const AutoPlayStart = () => {
+    if (!slideDone) {
+      setSlideDone(true);
+    }
+  };
+
+  return (
+    <div
+      className="container-slider"
+      onMouseEnter={AutoPlayStop}
+      onMouseLeave={AutoPlayStart}
+    >
+      {children.map((item, index) => {
+        return (
           <div
-            className={`slider-item ${activeIndex === index ? 'slider-item-active' : ''}`}
+            className={"slider-item slider-item-active-" + (activeIndex + 1)}
             key={index}
           >
             {item}
           </div>
-        ))}
-  
-        <div className="container-slider-links">
-          {children.map((_, index) => (
+        );
+      })}
+
+      <div className="container-slider-links">
+        {children.map((item, index) => {
+          return (
             <button
               key={index}
-              className={`container-slider-links-small ${activeIndex === index ? 'container-slider-links-small-active' : ''}`}
+              className={
+                activeIndex === index
+                  ? "container-slider-links-small container-slider-links-small-active"
+                  : "container-slider-links-small"
+              }
               onClick={(e) => {
                 e.preventDefault();
                 setActiveIndex(index);
               }}
-            />
-          ))}
-        </div>
-  
-        <button
-          className="slider-btn-next"
-          onClick={(e) => {
-            e.preventDefault();
-            slideNext();
-          }}
-        >
-          {">"}
-        </button>
-        <button
-          className="slider-btn-prev"
-          onClick={(e) => {
-            e.preventDefault();
-            slidePrev();
-          }}
-        >
-          {"<"}
-        </button>
+            ></button>
+          );
+        })}
       </div>
-    );
-  }
-  
-  CustomSlider.propTypes = {
-    children: PropTypes.node.isRequired,
+
+      <button
+        className="slider-btn-next"
+        onClick={(e) => {
+          e.preventDefault();
+          slideNext();
+        }}
+      >
+        {">"}
+      </button>
+      <button
+        className="slider-btn-prev"
+        onClick={(e) => {
+          e.preventDefault();
+          slidePrev();
+        }}
+      >
+        {"<"}
+      </button>
+    </div>
+  );
+}
+
+export default CustomSlider;
+
+CustomSlider.propTypes = {
+    children: PropTypes.string.isRequired,
   };
-  
-  export default CustomSlider;

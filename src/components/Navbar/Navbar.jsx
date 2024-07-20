@@ -3,10 +3,11 @@ import "./Navbar.css";
 import { useState } from "react";
 
 //ikonki
-import { FaHouseChimney } from "react-icons/fa6";
-import { IoPeople } from "react-icons/io5";
-import { FaPaperPlane } from "react-icons/fa";
-import { GiGraduateCap } from "react-icons/gi";
+import { LuBrainCircuit } from "react-icons/lu";
+// import { FaHouseChimney } from "react-icons/fa6";
+// import { IoPeople } from "react-icons/io5";
+// import { FaPaperPlane } from "react-icons/fa";
+// import { GiGraduateCap } from "react-icons/gi";
 
 export const Navbar = () => {
   const [selectedNavLink, setSelectedNavLink] = useState("home");
@@ -18,6 +19,10 @@ export const Navbar = () => {
   };
   return (
     <nav>
+      <div className="cybertech-title">
+        CYBERTECH
+        <LuBrainCircuit />
+      </div>
       <ul>
         <li>
           <NavLink
@@ -25,7 +30,7 @@ export const Navbar = () => {
             className={`nav-icon ${selectedNavLink === "home" ? "navbar-chosen" : ""}`}
             onClick={() => handleSelected("home")}
           >
-            <FaHouseChimney />
+            {/* <FaHouseChimney /> */}
             Home
           </NavLink>
         </li>
@@ -37,7 +42,7 @@ export const Navbar = () => {
             }`}
             onClick={() => handleSelected("members")}
           >
-            <IoPeople />
+            {/* <IoPeople /> */}
             Members
           </NavLink>
         </li>
@@ -49,7 +54,7 @@ export const Navbar = () => {
             }`}
             onClick={() => handleSelected("projects")}
           >
-            <GiGraduateCap />
+            {/* <GiGraduateCap /> */}
             Projects
           </NavLink>
         </li>
@@ -60,7 +65,7 @@ export const Navbar = () => {
             }`}
             onClick={() => handleSelected("contact-us")}
           >
-            <FaPaperPlane />
+            {/* <FaPaperPlane /> */}
             Contact us
           </NavLink>
         </li>

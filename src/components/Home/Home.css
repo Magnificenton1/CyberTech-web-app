@@ -4,10 +4,136 @@
   text-align: center;
   font-size: 70px;
 }
-.home-page-container{
+.home-page-container {
   width: 100%;
-  border: solid orange 1px;
+  height: 100%;
+  /* background-color: rgb(27, 27, 27); */
+  /* border: solid orange 10px; */
   /* height: 1600px; */
 }
 
+.bubbles {
+  position: absolute;
+  width: 100%;
+  min-height: 2860px;
+  z-index: -10;
+  top: 0;
+  left: 0;
+  /* border: solid 4px cyan; */
+  overflow: hidden;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    180deg,
+    rgb(0, 0, 0) 20%,
+    rgba(0, 255, 119, 1) 100%
+  );
+}
 
+.bubble {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 213, 99);
+  border-radius: 50%;
+  opacity: 0.5;
+  animation: flying 22s infinite ease-in;
+  box-shadow: 0 0 15px 5px rgba(0, 255, 119, 0.6);
+}
+
+.bubble:nth-child(1) {
+  width: 40px;
+  height: 40px;
+  left: 10%;
+  animation-duration: 17s;
+}
+
+.bubble:nth-child(2) {
+  width: 20px;
+  height: 20px;
+  left: 20%;
+  animation-duration: 11s;
+  animation-delay: 1s;
+}
+
+.bubble:nth-child(3) {
+  width: 50px;
+  height: 50px;
+  left: 35%;
+  animation-duration: 21s;
+  animation-delay: 2s;
+}
+
+.bubble:nth-child(4) {
+  width: 80px;
+  height: 80px;
+  left: 50%;
+  animation-duration: 15s;
+  animation-delay: 0s;
+}
+
+.bubble:nth-child(5) {
+  width: 35px;
+  height: 35px;
+  left: 55%;
+  animation-duration: 13s;
+  animation-delay: 1s;
+}
+
+.bubble:nth-child(6) {
+  width: 45px;
+  height: 45px;
+  left: 65%;
+  animation-duration: 17s;
+  animation-delay: 3s;
+}
+
+.bubble:nth-child(7) {
+  width: 25px;
+  height: 25px;
+  left: 75%;
+  animation-duration: 15s;
+  animation-delay: 2s;
+}
+
+.bubble:nth-child(8) {
+  width: 80px;
+  height: 80px;
+  left: 80%;
+  animation-duration: 13s;
+  animation-delay: 1s;
+}
+
+.bubble:nth-child(9) {
+  width: 15px;
+  height: 15px;
+  left: 70%;
+  animation-duration: 19s;
+  animation-delay: 0s;
+}
+
+.bubble:nth-child(10) {
+  width: 50px;
+  height: 50px;
+  left: 85%;
+  animation-duration: 11s;
+  animation-delay: 3s;
+}
+
+@keyframes flying {
+  0% {
+    bottom: -100px;
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(100px);
+  }
+  100% {
+    bottom: 2800px;
+    transform: translateX(-200px);
+  }
+}
+
+@media (max-width: 1200px) {
+  .bubbles {
+    height: 2960px;
+  }
+}
