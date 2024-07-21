@@ -1,6 +1,7 @@
 import "./Home.css"
 export const BackgroundAnimation = () => {
     return <div className="bubbles">
+    {/* <div className="bubble"></div>
     <div className="bubble"></div>
     <div className="bubble"></div>
     <div className="bubble"></div>
@@ -9,7 +10,6 @@ export const BackgroundAnimation = () => {
     <div className="bubble"></div>
     <div className="bubble"></div>
     <div className="bubble"></div>
-    <div className="bubble"></div>
-    <div className="bubble"></div>
+    <div className="bubble"></div> */}
     </div>
 }

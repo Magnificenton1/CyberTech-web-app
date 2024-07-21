@@ -11,27 +11,32 @@ import { LuBrainCircuit } from "react-icons/lu";
 
 export const Navbar = () => {
   const [selectedNavLink, setSelectedNavLink] = useState("home");
-//bardzo prosty system, może nawet za prosty
-// - porównywanie stringów z nazwami stron do useState zmiana po kliknięciu
-//NavLink - przenosi do ustawionego patha po kliknięciu jak button - path definiujemy w App.jsx
+  //bardzo prosty system, może nawet za prosty
+  // - porównywanie stringów z nazwami stron do useState zmiana po kliknięciu
+  //NavLink - przenosi do ustawionego patha po kliknięciu jak button - path definiujemy w App.jsx
   const handleSelected = (navlink) => {
     setSelectedNavLink(navlink);
   };
   return (
     <nav>
-      <div className="cybertech-title">
+      <div className="scroll-watcher">
+      </div>
+      <NavLink className="cybertech-title" to="/">
         CYBERTECH
         <LuBrainCircuit />
-      </div>
+      </NavLink>
       <ul>
+        
         <li>
           <NavLink
             to="/"
-            className={`nav-icon ${selectedNavLink === "home" ? "navbar-chosen" : ""}`}
+            className={`nav-icon ${
+              selectedNavLink === "home" ? "navbar-chosen" : ""
+            }`}
             onClick={() => handleSelected("home")}
           >
             {/* <FaHouseChimney /> */}
-            Home
+            {selectedNavLink === "home" ? "<Home/>" : "Home"}
           </NavLink>
         </li>
         <li>

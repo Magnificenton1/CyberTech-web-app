@@ -4,7 +4,7 @@
   }
 
 .welcome-container{
-    border: solid blue 2px;
+    /* border: solid blue 2px; */
     /* min-height: 500px; */
     /* height: clamp(500px, 30vh + 38rem, 1000px); */
     height: 100vh;
@@ -16,7 +16,7 @@
     z-index: 10;
 }
 .welcome-text{
-    border: solid pink 1px;
+    /* border: solid pink 1px; */
     width: 50%;
     min-width: 350px;
     height: auto;
@@ -28,7 +28,7 @@
 
 }
 .welcome-title{
-    border: solid pink 1px;
+    /* border: solid pink 1px; */
     width: 80%;
     min-width: 350px;
 
@@ -38,12 +38,12 @@
 
     font-size: clamp(3.75rem, 4vw + 1.2rem, 6rem);
     font-family: myFont;
-    color:white;
+    color:rgba(0, 255, 119, 1);
 }
 .welcome-catchphrase{
     font-family: myFont;
     font-size: clamp(0.75rem, 0.5vw + 1.0rem, 1.6rem);
-    color:white;
+    color:#F5F5F5;
 }
 .welcome-logo{
     border: solid pink 1px;

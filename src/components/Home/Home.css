@@ -12,6 +12,12 @@
   /* height: 1600px; */
 }
 
+.svg{
+  z-index: 2;
+  height: 198px;
+  /* border: solid 2px red; */
+}
+
 .bubbles {
   position: absolute;
   width: 100%;
@@ -21,12 +27,12 @@
   left: 0;
   /* border: solid 4px cyan; */
   overflow: hidden;
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
+  background-color: rgb(16,12,12);
+  /* background: linear-gradient(
     180deg,
-    rgb(0, 0, 0) 20%,
+    #F5F5F5 20%,
     rgba(0, 255, 119, 1) 100%
-  );
+  ); */
 }
 
 .bubble {

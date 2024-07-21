@@ -6,6 +6,7 @@ import { WindowTab } from "./WindowTab";
 import "./HomePanels.css";
 import { memo, useState } from "react";
 import { ProjectsPanel } from "./ProjectsPanel/ProjectsPanel";
+import { FadeInSection } from "../../FadeInSection/FadeInSection";
 
 export const HomeParallaxComponent = () => {
   // MEMOIZATION - optymalizacja!
@@ -53,17 +54,7 @@ export const HomeParallaxComponent = () => {
  05/12/2024  01:11 PM    &lt;DIR&gt;          Documents
  06/14/2024  11:45 AM    &lt;DIR&gt;          Downloads
  07/15/2024  09:30 PM    &lt;DIR&gt;          Music
- 07/17/2024  02:33 PM    &lt;DIR&gt;          Pictures
- 07/18/2024  03:12 PM                 0 example.txt
-                1 File(s)              0 bytes
-                6 Dir(s)  123,456,789,012 bytes free
- 
- C:\\Users\\YourUsername&gt;cd Documents
- 
- C:\\Users\\YourUsername\\Documents&gt;mkdir NewFolder
- 
- C:\\Users\\YourUsername\\Documents&gt;copy example.txt NewFolder
-         1 file(s) copied.`;
+`;
 
   return (
     <MouseParallaxContainer
@@ -71,23 +62,23 @@ export const HomeParallaxComponent = () => {
       globalFactorY={0.3}
       className="home-container"
     >
-      <MouseParallaxChild
-          className="home-panel home-panel1"
+      <FadeInSection>
+        <MouseParallaxChild
           factorX={factorX[0]}
           factorY={factorY[0]}
         >
           <div
-            className="panel-container"
+            className=" home-panel home-panel1"
             onMouseEnter={handleParallaxMouseEnter(0)}
             onMouseLeave={handleParallaxMouseLeave(0)}
           >
             <MemoizedWindowTab text={"Informacje o nas"} />
-            {/* <pre dangerouslySetInnerHTML={{ __html: text_output }} /> */}
-            {text_output}
+            <p dangerouslySetInnerHTML={{ __html: text_output }} />
           </div>
         </MouseParallaxChild>
-      <div className="panel2-container"
-      >
+      </FadeInSection>
+      <FadeInSection>
+      <div className="panel2-container">
         <MouseParallaxChild
           className="home-panel home-panel2"
           factorX={factorX[1]}
@@ -99,23 +90,26 @@ export const HomeParallaxComponent = () => {
             onMouseLeave={handleParallaxMouseLeave(1)}
           >
             <MemoizedWindowTab text={"Nasze projekty"} />
-            <ProjectsPanel/>
+            <ProjectsPanel />
           </div>
         </MouseParallaxChild>
       </div>
+      </FadeInSection>
+      <FadeInSection>
       <MouseParallaxChild
+        
+        factorX={factorX[2]}
+        factorY={factorY[2]}
+      >
+        <div
           className="home-panel home-panel3"
-          factorX={factorX[2]}
-          factorY={factorY[2]}
+          onMouseEnter={handleParallaxMouseEnter(2)}
+          onMouseLeave={handleParallaxMouseLeave(2)}
         >
-          <div
-            className="panel-container"
-            onMouseEnter={handleParallaxMouseEnter(2)}
-            onMouseLeave={handleParallaxMouseLeave(2)}
-          >
-            <MemoizedWindowTab text={"Dołącz do nas"} />
-          </div>
-        </MouseParallaxChild>
+          <MemoizedWindowTab text={"Dołącz do nas"} />
+        </div>
+      </MouseParallaxChild>
+      </FadeInSection>
     </MouseParallaxContainer>
   );
 };
