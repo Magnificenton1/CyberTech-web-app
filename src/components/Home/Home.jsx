@@ -1,12 +1,12 @@
+import { memo } from "react";
 import { BackgroundAnimation } from "./BackgroundAnimation";
-import { DetailedInfo } from "./DetailedInfo/DetailedInfo";
 import "./Home.css";
 import { HomeParallax } from "./HomePanelContent/HomeParallax";
 import { WavesGraphic } from "./WavesGraphic";
 import { WavesGraphic2 } from "./WavesGraphic2";
 import { WelcomeMessage } from "./WelcomeMessage/WelcomeMessage";
 
-export const Home = () => {
+export const HomeComponent = () => {
   return (
     <div className="home-page-container">
       <BackgroundAnimation />
@@ -14,7 +14,10 @@ export const Home = () => {
       <WavesGraphic />
       <HomeParallax />
       <WavesGraphic2 />
-      {/* <DetailedInfo /> */}
     </div>
   );
 };
+
+export const Home = memo(HomeComponent);
+
+

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="171.41032"
+   height="134.09557"
+   version="1.1"
+   viewBox="0 0 171.41032 134.09557"
+   id="svg48"
+   sodipodi:docname="cybertech_logo_shard.svg"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15)">
+  <defs
+     id="defs52" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1080"
+     id="namedview50"
+     showgrid="false"
+     inkscape:zoom="2"
+     inkscape:cx="166.19208"
+     inkscape:cy="48.743606"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg48"
+     lock-margins="true"
+     inkscape:document-rotation="0"
+     fit-margin-top="2"
+     fit-margin-left="2"
+     fit-margin-right="2"
+     fit-margin-bottom="2" />
+  <metadata
+     id="metadata2">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <path
+     style="fill:#000000;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="M 7.62294,41.87141 V 13.48744 L 19.11038,2 h 30.14496 v 8.86621 h -10.3682 z"
+     id="path1091" />
+  <path
+     style="fill:#000000;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 64.62505,107.02555 0.0625,3.4e-4 h 8.35916 L 123.21848,2.06477 h -8.2515 z"
+     id="path1093" />
+  <path
+     style="fill:#f25a29;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 26.12907,54.70445 4.61675,7.30814 v 27.86432 l 8.47319,8.47319 h 10.75452 v 8.81744 H 19.47977 L 7.82566,95.51344 V 64.46205 L 2,58.63639 30.64861,29.98778 v 17.29673 z"
+     id="path1099" />
+  <path
+     style="fill:#f25a29;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 55.76384,33.2225 17.07504,9.63798 V 55.66121 L 41.91863,38.60829 V 27.86538 L 72.80522,10.95034 v 12.64054 z"
+     id="path1101" />
+  <path
+     style="fill:#000000;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 163.35269,92.22415 v 28.38397 l -11.48744,11.48744 h -30.14496 v -8.86621 h 10.3682 z"
+     id="path1091-6" />
+  <path
+     style="fill:#f25a29;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 145.28126,79.53538 -4.61675,-7.30814 V 44.36292 l -8.47319,-8.47319 H 121.4368 v -8.81744 h 30.49376 l 11.65411,11.6541 v 31.05139 l 5.82566,5.82566 -28.64861,28.64861 V 86.95532 Z"
+     id="path1099-2" />
+  <path
+     style="fill:#f25a29;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="M 118.81405,100.98322 101.73901,91.34524 V 78.54451 l 30.92025,17.05292 v 10.74291 l -30.88659,16.91504 v -12.64054 z"
+     id="path1101-6" />
+</svg>

@@ -9,19 +9,35 @@ nav {
   background-color: black;
   z-index: 1;
 }
-.scroll-watcher {
+.scroll-watcher{
   z-index: -1;
   position: absolute;
   top: 0;
   height: 70px;
   border-bottom-right-radius: 0.5rem;
   width: 100%;
-  background-color: rgba(0, 255, 119, 1);
   scale: 0 1;
   transform-origin: left;
   animation: scroll-watcher linear;
   animation-timeline: scroll();
+
+  transition: background-color 0.5s ease;
 }
+.scroll-watcher-green {
+  background-color: rgba(0, 255, 119, 1);
+}
+.scroll-watcher-orange {
+  background-color: #f85c2c;
+}
+.switch{
+  height: 100%;
+  display: flex;
+  padding-top: 15px;
+  /* ogarnac jak wysrodkowac a nie jakis padding */
+
+  background-color: #ffffff;
+}
+
 @keyframes scroll-watcher {
   to {
     scale: 1 1;
@@ -56,6 +72,7 @@ nav ul li a {
   justify-content: center;
   text-decoration: none;
   text-align: center;
+  font-family: myFont;
 
   width: 200px;
   height: 60px;
@@ -68,7 +85,8 @@ nav ul li a {
   transition: color 0.4s ease;
 }
 nav ul li a:hover {
-  color: rgb(0, 255, 119);
+  /* color: rgb(0, 255, 119); */
+  color: #f85c2c;
 }
 .navbar-title {
   text-decoration: none;
@@ -82,4 +100,70 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.hamburger {
+  display: none;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bar {
+  display: none;
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease-in-out;
+  background-color: #101010;
+}
+.bar:first-child {
+  margin-top: 18px;
+}
+@media only screen and (max-width: 768px) {
+  nav ul {
+    position: fixed;
+    left: -100%;
+    top: 5rem;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+
+  nav ul .active {
+    left: 0;
+  }
+
+  nav ul li {
+    margin: 2.5rem 0;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    border: solid red 1px;
+  }
+  .bar {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
 }

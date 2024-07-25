@@ -2,15 +2,21 @@ import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 import { useState } from "react";
 
-//ikonki
-import { LuBrainCircuit } from "react-icons/lu";
-// import { FaHouseChimney } from "react-icons/fa6";
-// import { IoPeople } from "react-icons/io5";
-// import { FaPaperPlane } from "react-icons/fa";
-// import { GiGraduateCap } from "react-icons/gi";
+import { useTheme } from "../../ThemeContext";
+import ReactSwitch from "react-switch";
 
 export const Navbar = () => {
   const [selectedNavLink, setSelectedNavLink] = useState("home");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
+
+  const handleMenuOpen = () => {
+    if (isMenuOpen === false) {
+      setIsMenuOpen(true);
+    } else {
+      setIsMenuOpen(false);
+    }
+  };
   //bardzo prosty system, może nawet za prosty
   // - porównywanie stringów z nazwami stron do useState zmiana po kliknięciu
   //NavLink - przenosi do ustawionego patha po kliknięciu jak button - path definiujemy w App.jsx
@@ -19,20 +25,29 @@ export const Navbar = () => {
   };
   return (
     <nav>
-      <div className="scroll-watcher">
-      </div>
+      <div className={`scroll-watcher-${theme} scroll-watcher`}></div>
       <NavLink className="cybertech-title" to="/">
-        CYBERTECH
-        <LuBrainCircuit />
+        placeholder
       </NavLink>
+      {/* ten navlink jest na cała stronę - naprawić! */}
       <ul>
-        
+        <li>
+          <div className="switch">
+            <ReactSwitch
+              onChange={toggleTheme}
+              checked={theme === "orange"}
+              uncheckedIcon={false}
+              checkedIcon={false}
+              onColor="#ff7f00"
+              offColor="#00ff00"
+            />
+          </div>
+        </li>
+
         <li>
           <NavLink
             to="/"
-            className={`nav-icon ${
-              selectedNavLink === "home" ? "navbar-chosen" : ""
-            }`}
+            className={` ${selectedNavLink === "home" ? "navbar-chosen" : ""}`}
             onClick={() => handleSelected("home")}
           >
             {/* <FaHouseChimney /> */}
@@ -42,7 +57,7 @@ export const Navbar = () => {
         <li>
           <NavLink
             to="/members"
-            className={`nav-icon ${
+            className={` ${
               selectedNavLink === "members" ? "navbar-chosen" : ""
             }`}
             onClick={() => handleSelected("members")}
@@ -54,7 +69,7 @@ export const Navbar = () => {
         <li>
           <NavLink
             to="/projects"
-            className={`nav-icon ${
+            className={` ${
               selectedNavLink === "projects" ? "navbar-chosen" : ""
             }`}
             onClick={() => handleSelected("projects")}
@@ -65,7 +80,7 @@ export const Navbar = () => {
         </li>
         <li>
           <NavLink
-            className={`nav-icon ${
+            className={`${
               selectedNavLink === "contact-us" ? "navbar-chosen" : ""
             }`}
             onClick={() => handleSelected("contact-us")}
@@ -75,6 +90,14 @@ export const Navbar = () => {
           </NavLink>
         </li>
       </ul>
+      <div
+        className={`hamburger ${isMenuOpen ? "active" : ""}`}
+        onClick={() => handleMenuOpen()}
+      >
+        <span className="bar"></span>
+        <span className="bar"></span>
+        <span className="bar"></span>
+      </div>
     </nav>
   );
 };

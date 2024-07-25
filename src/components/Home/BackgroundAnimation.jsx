@@ -1,15 +1,17 @@
+import { useTheme } from "../../ThemeContext";
 import "./Home.css"
 export const BackgroundAnimation = () => {
-    return <div className="bubbles">
-    {/* <div className="bubble"></div>
-    <div className="bubble"></div>
-    <div className="bubble"></div>
-    <div className="bubble"></div>
-    <div className="bubble"></div>
-    <div className="bubble"></div>
-    <div className="bubble"></div>
-    <div className="bubble"></div>
-    <div className="bubble"></div>
-    <div className="bubble"></div> */}
+    const { theme } = useTheme();
+    return <div className={`bubbles-${theme} bubbles`}>
+    {/* <div className={`bubble-${theme}`}></div>
+    <div className={`bubble-${theme}`}></div>
+    <div className={`bubble-${theme}`}></div>
+    <div className={`bubble-${theme}`}></div>
+    <div className={`bubble-${theme}`}></div>
+    <div className={`bubble-${theme}`}></div>
+    <div className={`bubble-${theme}`}></div>
+    <div className={`bubble-${theme}`}></div>
+    <div className={`bubble-${theme}`}></div>
+    <div className={`bubble-${theme}`}></div> */}
     </div>
 }

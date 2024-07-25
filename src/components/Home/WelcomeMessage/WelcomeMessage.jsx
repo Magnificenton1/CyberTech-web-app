@@ -1,12 +1,18 @@
+import { useTheme } from "../../../ThemeContext"
+import { Logo } from "./Logo";
+import { LogoText } from "./LogoText";
 import "./WelcomeMessage.css"
 export const WelcomeMessage = () => {
+
+    const { theme } = useTheme();
     return(
         <div className="welcome-container">
             <div className="welcome-text">
-                <div className="welcome-title">KN CYBERTECH</div>
-                <div><pre className="welcome-catchphrase">Świat  AI  stoi  przed  nami</pre></div>
+                <LogoText/>
             </div>
-            <div className="welcome-logo"></div>
+            <div className="welcome-logo">
+                <Logo/>
+            </div>
         </div>
     )
 }

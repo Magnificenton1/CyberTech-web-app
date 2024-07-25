@@ -7,6 +7,7 @@ import "./HomePanels.css";
 import { memo, useState } from "react";
 import { ProjectsPanel } from "./ProjectsPanel/ProjectsPanel";
 import { FadeInSection } from "../../FadeInSection/FadeInSection";
+import { useTheme } from "../../../ThemeContext";
 
 export const HomeParallaxComponent = () => {
   // MEMOIZATION - optymalizacja!
@@ -16,6 +17,7 @@ export const HomeParallaxComponent = () => {
   const [factorX, setFactorX] = useState([0.1, 0.3, 0.05]);
   const [factorY, setFactorY] = useState([0.08, 0.1, 0.05]); // jakieś losowe wartości co miałem w głowie - można zmieniać
 
+  const { theme } = useTheme();
   const handleParallaxMouseEnter = (number) => {
     return () => {
       const newFactorX = [...factorX];
@@ -60,7 +62,7 @@ export const HomeParallaxComponent = () => {
     <MouseParallaxContainer
       globalFactorX={0.3}
       globalFactorY={0.3}
-      className="home-container"
+      className={`${theme === "green" ? "home-container-green" : "home-container-orange"} home-container`}
     >
       <FadeInSection>
         <MouseParallaxChild
@@ -68,7 +70,7 @@ export const HomeParallaxComponent = () => {
           factorY={factorY[0]}
         >
           <div
-            className=" home-panel home-panel1"
+            className={`${theme === "green" ? "home-panel-green" : "home-panel-orange"} home-panel home-panel1`}
             onMouseEnter={handleParallaxMouseEnter(0)}
             onMouseLeave={handleParallaxMouseLeave(0)}
           >
@@ -80,7 +82,7 @@ export const HomeParallaxComponent = () => {
       <FadeInSection>
       <div className="panel2-container">
         <MouseParallaxChild
-          className="home-panel home-panel2"
+          className={`${theme === "green" ? "home-panel-green" : "home-panel-orange"} home-panel home-panel2`}
           factorX={factorX[1]}
           factorY={factorY[1]}
         >
@@ -102,7 +104,7 @@ export const HomeParallaxComponent = () => {
         factorY={factorY[2]}
       >
         <div
-          className="home-panel home-panel3"
+          className={`${theme === "green" ? "home-panel-green" : "home-panel-orange"} home-panel home-panel3`}
           onMouseEnter={handleParallaxMouseEnter(2)}
           onMouseLeave={handleParallaxMouseLeave(2)}
         >

@@ -4,17 +4,20 @@ import { Home } from "./components/Home/Home";
 import { Members } from "./components/Members/Members";
 import { Projects } from "./components/Projects/Projects";
 import { News } from "./components/News/News";
+import { ThemeProvider } from "./ThemeContext";
 
 function App() {
   return (
     <div className="whole-app">
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/members" element={<Members />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/news" element={<News/>}/>
-      </Routes>
+      <ThemeProvider>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/members" element={<Members />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/news" element={<News />} />
+        </Routes>
+      </ThemeProvider>
     </div>
   );
 }

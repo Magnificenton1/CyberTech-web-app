@@ -2,30 +2,21 @@
   font-family: myFont;
   src: url(./../../../assets/OCR-A-font.ttf);
 }
-
 .home-container {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
-  /* background-color: rgb(230, 235, 229); */
-  background: rgb(224, 224, 224);
-  /* background: linear-gradient(
-    180deg,
-    rgba(224, 224, 224, 1) 28%,
-    rgba(132, 253, 189, 1) 71%,
-    rgba(224, 224, 224, 1) 100%
-  ); */
-  background: linear-gradient(
-    180deg,
-    rgb(255, 255, 255) 28%,
-    rgba(132, 253, 189, 1) 71%,
-    rgb(255, 255, 255) 100%
-  );
   padding: 100px;
-  /* border: solid pink 1px; */
   min-height: 1200px;
 
+  transition: background-color 0.5s ease;
+}
+.home-container-orange {
+  background-color: rgb(16,12,12);
+}
+.home-container-green {
+  background-color: rgb(255, 255, 255);
 }
 
 .panel2-container {
@@ -49,6 +40,12 @@
   box-sizing: border-box;
   overflow-wrap: break-word;
   white-space: pre-wrap;
+}
+.home-panel-orange{
+  box-shadow: 0px 0px 16px 10px rgba(255, 255, 255, 0.253);
+}
+.home-panel-green{
+  box-shadow: 0px 0px 16px 10px rgba(0, 0, 0, 0.253);
 }
 /* musi tak być bo inaczej jest rozmazane podczas poruszania się, a tak to jest tylko podczas hover */
 .home-panel:hover {
@@ -76,7 +73,7 @@
   width: 30%;
   min-width: 350px;
 }
-p{
+p {
   padding: 10px;
   font-family: myFont;
 }
