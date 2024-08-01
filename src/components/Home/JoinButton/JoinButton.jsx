@@ -1,23 +1,13 @@
-// import "./JoinButton.css";
+import "./JoinButton.css";
 export const JoinButton = () => {
   return (
-    <>
-      <svg width="0" height="0">
-        <filter id="filter">
-          <feTurbulence
-            type="fractalNoise"
-            baseFrequency=".01"
-            numOctaves="6"
-          />
-          <feDisplacementMap in="SourceGraphic" scale="100" />
-        </filter>
-      </svg>
-      <div className="wrapper">
-        <div className="button _1">
-          <span>hover</span>
-          <div className="back"></div>
-        </div>
-      </div>
-    </>
+    <div className="join-button-container">
+      <p>Podoba ci się to co widzisz i chcesz tworzyć z nami przyszłość AI?</p>
+      <button className="join-button">
+        <span className="join-text-container">
+          <span className="join-text">Button</span>
+        </span>
+      </button>
+    </div>
   );
 };

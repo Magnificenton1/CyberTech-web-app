@@ -24,7 +24,8 @@
   flex-direction: row;
   width: 100%;
   height: auto;
-  border: solid 1px red;
+
+  margin-bottom: 20px;
 }
 .panel2-container {
   display: flex;
@@ -33,7 +34,6 @@
   align-items: flex-end;
   width: 100%;
   height: auto;
-  border: solid 1px red;
 
   margin-bottom: 20px;
 }
@@ -85,6 +85,9 @@
 /* trza dodac clamp height żeby było ładnie i mobile support */
 p {
   padding: 10px;
+  font-family: myFont;
+}
+span{
   font-family: myFont;
 }
 

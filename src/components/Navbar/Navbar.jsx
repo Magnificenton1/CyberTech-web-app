@@ -1,10 +1,11 @@
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 import { useState } from "react";
-
 import { useTheme } from "../../useTheme";
 import ReactSwitch from "react-switch";
 import { LogoTextNavbar } from "./LogoTextNavbar";
+import { LogoNavlink2 } from "./LogoNavlink2";
+import { LogoNavlink1 } from "./LogoNavlink1";
 
 export const Navbar = () => {
   const [selectedNavLink, setSelectedNavLink] = useState("home");
@@ -28,23 +29,25 @@ export const Navbar = () => {
     <nav>
       <div className={`scroll-watcher-${theme} scroll-watcher`}></div>
       <NavLink className="cybertech-title" to="/">
-        <LogoTextNavbar/>
+        <LogoTextNavbar />
       </NavLink>
-      <div style={{ height: "100%", width: "100%", backgroundColor: "white"}}></div>
-      {/* ten navlink jest na cała stronę - naprawić! */}
+      <div className="switch">
+        <ReactSwitch
+          onChange={toggleTheme}
+          checked={theme === "orange"}
+          handleDiameter={28}
+          height={30}
+          width={58}
+          uncheckedIcon={false}
+          checkedIcon={false}
+          onColor="#f85c2c"
+          offColor="#00ff77"
+        />
+      </div>
+      <div
+        style={{ height: "100%", width: "100%", backgroundColor: "white" }}
+      ></div>
       <ul className={`ul-${theme}`}>
-        <li>
-          <div className="switch">
-            <ReactSwitch
-              onChange={toggleTheme}
-              checked={theme === "orange"}
-              uncheckedIcon={false}
-              checkedIcon={false}
-              onColor="#ff7f00"
-              offColor="#00ff00"
-            />
-          </div>
-        </li>
 
         <li>
           <NavLink
@@ -52,8 +55,13 @@ export const Navbar = () => {
             className={` ${selectedNavLink === "home" ? "navbar-chosen" : ""}`}
             onClick={() => handleSelected("home")}
           >
-            {/* <FaHouseChimney /> */}
-            {selectedNavLink === "home" ? "{<Home/>}" : "Home"}
+            {selectedNavLink === "home" ? (
+              <LogoNavlink1 style={{ marginLeft: "2px" }} />
+            ) : (
+              ""
+            )}
+            Home
+            {selectedNavLink === "home" ? <LogoNavlink2 /> : ""}
           </NavLink>
         </li>
         <li>
@@ -64,8 +72,9 @@ export const Navbar = () => {
             }`}
             onClick={() => handleSelected("members")}
           >
-            {/* <IoPeople /> */}
+            {selectedNavLink === "members" ? <LogoNavlink1 /> : ""}
             Members
+            {selectedNavLink === "members" ? <LogoNavlink2 /> : ""}
           </NavLink>
         </li>
         <li>
@@ -76,8 +85,9 @@ export const Navbar = () => {
             }`}
             onClick={() => handleSelected("projects")}
           >
-            {/* <GiGraduateCap /> */}
+            {selectedNavLink === "projects" ? <LogoNavlink1 /> : ""}
             Projects
+            {selectedNavLink === "projects" ? <LogoNavlink2 /> : ""}
           </NavLink>
         </li>
         <li>
@@ -87,8 +97,9 @@ export const Navbar = () => {
             }`}
             onClick={() => handleSelected("contact-us")}
           >
-            {/* <FaPaperPlane /> */}
+            {selectedNavLink === "contact-us" ? <LogoNavlink1 /> : ""}
             Contact us
+            {selectedNavLink === "contact-us" ? <LogoNavlink2 /> : ""}
           </NavLink>
         </li>
       </ul>

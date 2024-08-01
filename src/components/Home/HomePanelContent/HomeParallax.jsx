@@ -47,13 +47,13 @@ export const HomeParallaxComponent = () => {
   };
 
   const text_output = `
-  Grupa naszego koła działa od roku 2014, lecz dopiero w 2017 stworzyliśmy koło o nazwie CyberTech. Sztuczna Inteligencja,
-  Machine Learning, Przetwarzanie obrazów – to obszry naszych zainteresowań.
+  <span>Grupa naszego koła działa od roku <span style="color: rgba(0, 255, 119, 1);">2014</span>, lecz dopiero w <span style="color: #f85c2c;">2017</span> stworzyliśmy koło o nazwie <span style="color: rgba(0, 255, 119, 1);">CyberTech</span>.
+  <span style="color: #f85c2c;">Sztuczna Inteligencja, Machine Learning, Przetwarzanie obrazów </span>– to obszry naszych zainteresowań.</span>
 
-  Zajmujemy się w szczególności Tensorflow oraz Kerasem. Planujemy ciągle eksplorować i uczyć się w polu AI.
-  Organizujemy również wykłady dla członków koła, jak również prowadzimy sesje live codingu oraz prowadzimy kanał na youtube.
-  Jaki jest próg wejściowy? Żaden! Jesteśmy grupą pasjonatów, której zależy na szlifowaniu swoich umiejętności i każdy, kto chce nam pomóc jest mile widziany.
+  Zajmujemy się w szczególności <span style="color: rgba(0, 255, 119, 1);">Tensorflow</span> oraz <span style="color: #f85c2c;">Kerasem</span>. Planujemy ciągle eksplorować i uczyć się w polu AI.
+  <span style="color: rgba(0, 255, 119, 1); font-size: 20px">Organizujemy rowniez wykłady dla czlonkow kola, jak rowniez prowadzimy sesje live codingu oraz prowadzimy kanal na youtube!!!</span>
   
+  <span style="color: #f85c2c;">Jaki jest próg wejściowy?</span> Żaden! Jesteśmy grupą pasjonatów, której zależy na szlifowaniu swoich umiejętności i każdy, kto chce nam pomóc jest mile widziany.
   No dobra może potrzebujecie sprawnego laptopa...
   Dajemy dużo miejsca na rozwój i jesteśmy otwarci na młodych, ambitnych ludzi.
 `;
@@ -78,7 +78,7 @@ export const HomeParallaxComponent = () => {
             onMouseLeave={handleParallaxMouseLeave(0)}
           >
             <MemoizedWindowTab text={"Informacje o nas"} />
-            <p dangerouslySetInnerHTML={{ __html: text_output }} /> 
+            <p style={{fontSize: "18px"}} dangerouslySetInnerHTML={{ __html: text_output }} /> 
           </div>
         </div>
       </FadeInSection>
