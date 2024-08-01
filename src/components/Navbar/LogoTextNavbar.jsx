@@ -1,7 +1,7 @@
-import { useTheme } from "../../../useTheme";
-import "./WelcomeMessage.css";
 
-export const LogoText = () => {
+import { useTheme } from "../../useTheme";
+
+export const LogoTextNavbar = () => {
   const { theme } = useTheme();
 
   const getFillColor = (color1, color2) => {
@@ -27,7 +27,7 @@ export const LogoText = () => {
           id="path6"
         />
         <g id="g46" transform="translate(-255.44918,-340.86552)">
-          <path d="m 534.49,443.8 h 3.7018 v -2.1634 h -4.9632 z" id="path8" fill={getFillColor("#ffffff", "#000000")}/>
+          <path d="m 534.49,443.8 h 3.7018 v -2.1634 h -4.9632 z" id="path8" fill="#000000"/>
           <rect
             x="553.27002"
             y="432.35999"
@@ -35,14 +35,14 @@ export const LogoText = () => {
             height="11.547"
             opacity="0.997"
             id="rect10"
-            fill={getFillColor("#ffffff", "#000000")}
+            fill="#000000"
           />
           <path
             d="m 555.54,432.36 7.37,10.513 v 0.92168 h -2.0981 l -5.4244,-7.4514 -1.0617,-2.2581 z"
             id="path12"
-            fill={getFillColor("#ffffff", "#000000")}
+            fill="#000000"
           />
-          <path d="m 560.8,439.28 v -6.9341 h 2.2044 v 8.3464 z" id="path14" fill={getFillColor("#ffffff", "#000000")}/>
+          <path d="m 560.8,439.28 v -6.9341 h 2.2044 v 8.3464 z" id="path14" fill="#000000"/>
           <rect
             x="544.34003"
             y="432.34"
@@ -50,7 +50,7 @@ export const LogoText = () => {
             height="11.509"
             opacity="0.997"
             id="rect16"
-            fill={getFillColor("#ffffff", "#000000")}
+            fill="#000000"
           />
           <rect
             x="530.44"
@@ -59,7 +59,7 @@ export const LogoText = () => {
             height="11.546"
             opacity="0.997"
             id="rect18"
-            fill={getFillColor("#ffffff", "#000000")}
+            fill="#000000"
           />
           <rect
             x="585.38"
@@ -68,7 +68,7 @@ export const LogoText = () => {
             height="1.8936"
             opacity="0.997"
             id="rect20"
-            fill={getFillColor("#ffffff", "#000000")}
+            fill="#000000"
           />
           <rect
             x="585.27002"
@@ -77,7 +77,7 @@ export const LogoText = () => {
             height="1.8896"
             opacity="0.997"
             id="rect22"
-            fill={getFillColor("#ffffff", "#000000")}
+            fill="#000000"
           />
           <rect
             x="585.27002"
@@ -87,9 +87,9 @@ export const LogoText = () => {
             ry="0"
             opacity="0.997"
             id="rect24"
-            fill={getFillColor("#ffffff", "#000000")}
+            fill="#000000"
           />
-          <path d="m 588,437.17 h 3.4809 v 1.9444 h -2.469 z" id="path26" fill={getFillColor("#ffffff", "#000000")}/>
+          <path d="m 588,437.17 h 3.4809 v 1.9444 h -2.469 z" id="path26" fill="#000000"/>
           <rect
             x="569.59003"
             y="432.25"
@@ -97,27 +97,27 @@ export const LogoText = () => {
             height="11.466"
             opacity="0.997"
             id="rect28"
-            fill={getFillColor("#ffffff", "#000000")}
+            fill="#000000"
           />
           <path
             d="m 575.82,432.33 h 2.9029 l -7.1496,9.0526 -0.1492,-3.4678 z"
             id="path30"
-            fill={getFillColor("#ffffff", "#000000")}
+            fill="#000000"
           />
           <path
             d="m 575.91,443.83 h 2.7611 l -4.0907,-5.2777 -0.81288,2.4068 z"
             id="path32"
-            fill={getFillColor("#ffffff", "#000000")}
+            fill="#000000"
           />
           <path
             d="m 643.85,439.83 v 3.9258 h 2.218 v -3.846 l 4.2472,-7.547 h -2.8029 z"
             id="path34"
-            fill={getFillColor("#ffffff", "#000000")}
+           fill="#000000"
           />
           <path
             d="m 639.7,432.35 h 2.6408 l 2.3732,4.7394 -1.6858,1.411 z"
             id="path36"
-            fill={getFillColor("#ffffff", "#000000")}
+            fill="#000000"
           />
           <rect
             x="625.06"
@@ -126,7 +126,7 @@ export const LogoText = () => {
             height="11.511"
             opacity="0.997"
             id="rect38"
-            fill={getFillColor("#ffffff", "#000000")}
+            fill="#000000"
           />
           <rect
             x="625.06"
@@ -135,7 +135,7 @@ export const LogoText = () => {
             height="2.0014"
             opacity="0.997"
             id="rect40"
-            fill={getFillColor("#ffffff", "#000000")}
+            fill="#000000"
           />
           <rect
             x="625.15997"
@@ -144,12 +144,12 @@ export const LogoText = () => {
             height="2.0014"
             opacity="0.997"
             id="rect42"
-            fill={getFillColor("#ffffff", "#000000")}
+            fill="#000000"
           />
           <path
             d="m 630.8,434.25 c 0.19936,-0.005 0.98456,0.46858 0.9558,1.33 -0.033,0.99001 -0.73198,1.3948 -1.0075,1.4175 h -1.0426 v 2.0011 h 1.2689 c 0.90218,0 1.743,0.83543 1.749,1.5419 0.006,0.69462 -0.55164,1.3154 -1.2254,1.3154 l -3.3609,0.0568 1.0907,1.8892 h 2.4645 c 2.1114,0 3.2324,-2.2203 3.2566,-3.419 0.0259,-1.2863 -0.4025,-1.9065 -1.3805,-2.8654 0.38378,-0.80047 0.68544,-1.2656 0.66961,-1.8114 -0.0363,-1.2516 -1.1541,-3.4574 -3.3599,-3.4574 h -0.96394 v 1.9941 z"
             id="path44"
-            fill={getFillColor("#ffffff", "#000000")}
+            fill="#000000"
           />
           <rect
             x="697.87738"
@@ -158,7 +158,7 @@ export const LogoText = () => {
             height="11.511"
             opacity="0.997"
             id="rect38-3"
-            fill={getFillColor("#ffffff", "#000000")}
+            fill="#000000"
           />
           <rect
             x="697.87738"
@@ -167,7 +167,7 @@ export const LogoText = () => {
             height="2.0014"
             opacity="0.997"
             id="rect40-6"
-            fill={getFillColor("#ffffff", "#000000")}
+            fill="#000000"
           />
           <rect
             x="697.97736"
@@ -176,22 +176,22 @@ export const LogoText = () => {
             height="2.0014"
             opacity="0.997"
             id="rect42-7"
-            fill={getFillColor("#ffffff", "#000000")}
+            fill="#000000"
           />
           <path
             d="m 703.61731,434.26483 c 0.19936,-0.005 0.98456,0.46858 0.9558,1.33 -0.033,0.99001 -0.73198,1.3948 -1.0075,1.4175 h -1.0426 v 2.0011 h 1.2689 c 0.90218,0 1.743,0.83543 1.749,1.5419 0.006,0.69462 -0.55164,1.3154 -1.2254,1.3154 l -3.3609,0.0568 1.0907,1.8892 h 2.4645 c 2.1114,0 3.2324,-2.2203 3.2566,-3.419 0.0259,-1.2863 -0.4025,-1.9065 -1.3805,-2.8654 0.38378,-0.80047 0.68544,-1.2656 0.66961,-1.8114 -0.0363,-1.2516 -1.1541,-3.4574 -3.3599,-3.4574 h -0.96394 v 1.9941 z"
             id="path44-5"
-            fill={getFillColor("#ffffff", "#000000")}
+            fill="#000000"
           />
           <path
             d="m 685.27832,439.96429 v 3.9258 h 2.218 v -3.846 l 4.2472,-7.547 h -2.8029 z"
             id="path34-3"
-            fill={getFillColor("#ffffff", "#000000")}
+            fill="#000000"
           />
           <path
             d="m 681.12832,432.48429 h 2.6408 l 2.3732,4.7394 -1.6858,1.411 z"
             id="path36-5"
-            fill={getFillColor("#ffffff", "#000000")}
+            fill="#000000"
           />
           <rect
             x="714.48859"
@@ -200,7 +200,7 @@ export const LogoText = () => {
             height="1.8936"
             opacity="0.997"
             id="rect20-2"
-            fill={getFillColor("#ffffff", "#000000")}
+            fill="#000000"
           />
           <rect
             x="714.3786"
@@ -209,7 +209,7 @@ export const LogoText = () => {
             height="1.8896"
             opacity="0.997"
             id="rect22-9"
-            fill={getFillColor("#ffffff", "#000000")}
+            fill="#000000"
           />
           <rect
             x="714.3786"
@@ -219,12 +219,12 @@ export const LogoText = () => {
             ry="0"
             opacity="0.997"
             id="rect24-1"
-            fill={getFillColor("#ffffff", "#000000")}
+            fill="#000000"
           />
           <path
             d="m 717.10855,437.26876 h 3.4809 v 1.9444 h -2.469 z"
             id="path26-2"
-            fill={getFillColor("#ffffff", "#000000")}
+            fill="#000000"
           />
           <rect
             x="758.9032"
@@ -233,7 +233,7 @@ export const LogoText = () => {
             height="1.8936"
             opacity="0.997"
             id="rect20-2-0"
-            fill={getFillColor("#ffffff", "#000000")}
+            fill="#000000"
           />
           <rect
             x="758.79321"
@@ -242,7 +242,7 @@ export const LogoText = () => {
             height="1.8896"
             opacity="0.997"
             id="rect22-9-9"
-            fill={getFillColor("#ffffff", "#000000")}
+            fill="#000000"
           />
           <rect
             x="758.79321"
@@ -252,16 +252,16 @@ export const LogoText = () => {
             ry="0"
             opacity="0.997"
             id="rect24-1-3"
-            fill={getFillColor("#ffffff", "#000000")}
+            fill="#000000"
           />
           <path
             d="m 761.52315,437.15445 h 3.4809 v 1.9444 h -2.469 z"
             id="path26-2-6"
-            fill={getFillColor("#ffffff", "#000000")}
+            fill="#000000"
           />
         </g>
         <path
-          fill={getFillColor("#ffffff", "#000000")}
+          fill="#000000"
           stroke="none"
           strokeWidth="1px"
           strokeLinecap="butt"
@@ -271,7 +271,7 @@ export const LogoText = () => {
           id="path879"
         />
         <path
-          fill={getFillColor("#ffffff", "#000000")}
+          fill="#000000"
           stroke="none"
           strokeWidth="1px"
           strokeLinecap="butt"
@@ -282,7 +282,7 @@ export const LogoText = () => {
         />
         <rect
           opacity="0.997"
-          fill={getFillColor("#ffffff", "#000000")}
+          fill="#000000"
           stroke="none"
           strokeWidth="5.66929"
           strokeLinejoin="bevel"
@@ -294,7 +294,7 @@ export const LogoText = () => {
         />
         <rect
           opacity="0.997"
-          fill={getFillColor("#ffffff", "#000000")}
+          fill="#000000"
           stroke="none"
           strokeWidth="5.66929"
           strokeLinejoin="bevel"
@@ -305,7 +305,7 @@ export const LogoText = () => {
           y="91.365929"
         />
         <path
-          fill={getFillColor("#ffffff", "#000000")}
+          fill="#000000"
           stroke="none"
           strokeWidth="1px"
           strokeLinecap="butt"
@@ -316,7 +316,7 @@ export const LogoText = () => {
         />
         <rect
           opacity="0.997"
-          fill={getFillColor("#ffffff", "#000000")}
+          fill="#000000"
           stroke="none"
           strokeWidth="5.66929"
           strokeLinejoin="bevel"
@@ -328,7 +328,7 @@ export const LogoText = () => {
         />
         <rect
           opacity="0.997"
-          fill={getFillColor("#ffffff", "#000000")}
+          fill="#000000"
           stroke="none"
           strokeWidth="5.66929"
           strokeLinejoin="bevel"
@@ -340,7 +340,7 @@ export const LogoText = () => {
         />
         <rect
          opacity="0.997"
-         fill={getFillColor("#ffffff", "#000000")}
+         fill="#000000"
          stroke="none"
          strokeWidth="5.66929"
          strokeLinejoin="bevel"
@@ -351,7 +351,7 @@ export const LogoText = () => {
           y="97.351616"
         />
         <path
-          fill={getFillColor("#ffffff", "#000000")}
+          fill="#000000"
           stroke="none"
           strokeWidth="1px"
           strokeLinecap="butt"
@@ -361,7 +361,7 @@ export const LogoText = () => {
           id="path1021"
         />
         <path
-          fill={getFillColor("#ffffff", "#000000")}
+          fill="#000000"
           stroke="none"
           strokeWidth="1px"
           strokeLinecap="butt"
@@ -372,7 +372,7 @@ export const LogoText = () => {
         />
         <rect
           opacity="0.997"
-          fill={getFillColor("#ffffff", "#000000")}
+          fill="#000000"
           stroke="none"
           strokeWidth="5.66929"
           strokeLinejoin="bevel"
@@ -384,7 +384,7 @@ export const LogoText = () => {
         />
         <rect
           opacity="0.997"
-          fill={getFillColor("#ffffff", "#000000")}
+          fill="#000000"
           stroke="none"
           strokeWidth="5.66929"
           strokeLinejoin="bevel"
@@ -396,7 +396,7 @@ export const LogoText = () => {
         />
         <rect
           opacity="0.997"
-          fill={getFillColor("#ffffff", "#000000")}
+          fill="#000000"
           stroke="none"
           strokeWidth="5.66929"
           strokeLinejoin="bevel"
@@ -408,7 +408,7 @@ export const LogoText = () => {
         />
         <rect
           opacity="0.997"
-          fill={getFillColor("#ffffff", "#000000")}
+          fill="#000000"
           stroke="none"
           strokeWidth="5.66929"
           strokeLinejoin="bevel"
@@ -429,7 +429,7 @@ export const LogoText = () => {
           id="path1087"
         />
         <path
-          fill={getFillColor("#ffffff", "#000000")}
+          fill="#000000"
           stroke="none"
           strokeWidth="1px"
           strokeLinecap="butt"
@@ -440,12 +440,12 @@ export const LogoText = () => {
         />
         <path
           d="m 229.69654,73.3365 -8.96,-5.44 c -7.9552,14.87 -28.835,9.8112 -30.947,-6.4 -1.5232,-11.702 9.2896,-23.667 21.347,-19.77 4.2752,1.3792 7.168,4.6464 9.6,8.2496 l 8.96,-5.44 c -2.6944,-8.4384 -14.653,-13.12 -22.72,-13.12 -15.61,0 -29.571,12.454 -28.451,28.8 1.1136,16.282 15.005,28.25 31.331,26.291 6.8864,-0.8288 18.054,-5.6384 19.84,-13.171 m 45.44,-41.28 v 54.08 h 10.24 v -4.8 c 2.6272,2.2688 4.7648,4.3552 8.32,5.0368 2.9728,0.5664 6.0096,0.5152 8.96,-0.2048 9.78647,-2.38971 14.79237,-10.70171 14.87023,-18.94109 0.0952,-10.07565 -6.98881,-20.12541 -19.35023,-20.13091 -3.8336,0 -6.5344,0.7808 -9.92,2.56 l 3.52,7.36 c 3.3504,-0.768 6.032,-1.344 9.28,0.32 6.6944,3.4272 7.8272,12.531 2.2112,17.45 -5.8912,5.1584 -14.915,2.3968 -17.331,-4.9696 -1.28,-3.8976 -0.56,-8.7392 -0.56,-12.8 v -24.96 h -10.24 m 81.82609,46.08552 -8.8275,-3.89632 c -1.67195,1.82576 -3.02155,3.12613 -7.11406,3.19099 -4.09251,0.0648 -10.30248,-3.99668 -10.30248,-10.67081 0,-6.67414 4.93759,-10.91572 10.1601,-10.91572 5.22251,0 7.70078,3.06347 9.45805,7.56594 h -14.6575 l 4.86439,7.83056 19.62216,-0.0886 c 3.07861,-7.39244 -2.8493,-23.72914 -19.2755,-24.29775 -8.11954,-0.28106 -13.7983,4.58948 -16.10117,7.63286 -3.20195,4.23158 -4.28125,9.08335 -4.24157,11.69962 0.0785,5.1736 2.28012,11.81913 6.53379,15.2789 4.25367,3.45977 9.45394,5.17818 13.75357,5.23651 4.29963,0.0583 12.72865,-2.43277 16.22143,-8.57231 m 18.24,-26.24 v -4.48 h -10.56 v 38.72 h 10.56 l -0.0993,-21.69688 c 0.47142,-1.95956 1.32422,-3.55382 3.78573,-5.87026 2.46151,-2.31644 4.8853,-2.60988 7.16854,-2.60988 2.28324,0 4.18494,0.81064 5.25515,1.59799 l 5.05711,-8.79066 c -7.9211,-2.95126 -14.74069,-3.57123 -21.16719,3.12969 m -140.4798,39.36 -0.19913,10.25836 c 5.16609,0 9.08582,-0.57153 12.60621,-2.98474 10.37694,-7.11333 14.93051,-23.5322 19.06192,-35.43362 1.8016,-5.184 5.68741,-15.68005 5.68741,-15.68005 l -10.98275,0.0315 c 0,0 -3.14326,8.64696 -3.98806,11.16816 -1.61304,4.82163 -3.89759,11.32103 -6.01736,17.43497 -2.8594,8.24725 -7.62213,15.18087 -16.16864,15.20503"
-          fill={getFillColor("#ffffff", "#000000")}
+          fill="#000000"
             fillOpacity="1"
           id="path6-1"
         />
         <path
-          fill={getFillColor("#ffffff", "#000000")}
+          fill="#000000"
           stroke="none"
           strokeWidth="1px"
           strokeLinecap="butt"
@@ -455,7 +455,7 @@ export const LogoText = () => {
           id="path1182"
         />
         <path
-          fill={getFillColor("#ffffff", "#000000")}
+          fill="#000000"
           stroke="none"
           strokeWidth="1px"
           strokeLinecap="butt"

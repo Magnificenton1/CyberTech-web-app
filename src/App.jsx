@@ -5,6 +5,7 @@ import { Members } from "./components/Members/Members";
 import { Projects } from "./components/Projects/Projects";
 import { News } from "./components/News/News";
 import { ThemeProvider } from "./ThemeContext";
+import { Footer } from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/news" element={<News />} />
         </Routes>
+        <Footer/>
       </ThemeProvider>
     </div>
   );

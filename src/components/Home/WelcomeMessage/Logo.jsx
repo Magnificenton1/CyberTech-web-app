@@ -1,4 +1,4 @@
-import { useTheme } from "../../../ThemeContext";
+import { useTheme } from "../../../useTheme";
 import "./WelcomeMessage.css";
 
 export const Logo = () => {

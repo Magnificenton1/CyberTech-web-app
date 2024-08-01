@@ -1,5 +1,5 @@
 import {
-  MouseParallaxChild,
+  // MouseParallaxChild,
   MouseParallaxContainer,
 } from "react-parallax-mouse";
 import { WindowTab } from "./WindowTab";
@@ -7,7 +7,8 @@ import "./HomePanels.css";
 import { memo, useState } from "react";
 import { ProjectsPanel } from "./ProjectsPanel/ProjectsPanel";
 import { FadeInSection } from "../../FadeInSection/FadeInSection";
-import { useTheme } from "../../../ThemeContext";
+import { useTheme } from "../../../useTheme";
+import { JoinButton } from "../JoinButton/JoinButton";
 
 export const HomeParallaxComponent = () => {
   // MEMOIZATION - optymalizacja!
@@ -45,72 +46,77 @@ export const HomeParallaxComponent = () => {
     return Math.random() * 0.2 - 0.1;
   };
 
-  const text_output = `C:\\Users\\YourUsername&gt;dir
-  Volume in drive C has no label.
-  Volume Serial Number is XXXX-XXXX
- 
-  Directory of C:\\Users\\YourUsername
- 
- 07/18/2024  03:12 PM    &lt;DIR&gt;          .
- 07/18/2024  03:12 PM    &lt;DIR&gt;          ..
- 05/12/2024  01:11 PM    &lt;DIR&gt;          Documents
- 06/14/2024  11:45 AM    &lt;DIR&gt;          Downloads
- 07/15/2024  09:30 PM    &lt;DIR&gt;          Music
+  const text_output = `
+  Grupa naszego koła działa od roku 2014, lecz dopiero w 2017 stworzyliśmy koło o nazwie CyberTech. Sztuczna Inteligencja,
+  Machine Learning, Przetwarzanie obrazów – to obszry naszych zainteresowań.
+
+  Zajmujemy się w szczególności Tensorflow oraz Kerasem. Planujemy ciągle eksplorować i uczyć się w polu AI.
+  Organizujemy również wykłady dla członków koła, jak również prowadzimy sesje live codingu oraz prowadzimy kanał na youtube.
+  Jaki jest próg wejściowy? Żaden! Jesteśmy grupą pasjonatów, której zależy na szlifowaniu swoich umiejętności i każdy, kto chce nam pomóc jest mile widziany.
+  
+  No dobra może potrzebujecie sprawnego laptopa...
+  Dajemy dużo miejsca na rozwój i jesteśmy otwarci na młodych, ambitnych ludzi.
 `;
 
   return (
     <MouseParallaxContainer
       globalFactorX={0.3}
       globalFactorY={0.3}
-      className={`${theme === "green" ? "home-container-green" : "home-container-orange"} home-container`}
+      className={`${
+        theme === "green" ? "home-container-green" : "home-container-orange"
+      } home-container`}
     >
       <FadeInSection>
-        <MouseParallaxChild
-          factorX={factorX[0]}
-          factorY={factorY[0]}
+        <div className="panel1-container"
+        // factorX={factorX[0]} factorY={factorY[0]}
         >
           <div
-            className={`${theme === "green" ? "home-panel-green" : "home-panel-orange"} home-panel home-panel1`}
+            className={`${
+              theme === "green" ? "home-panel-green" : "home-panel-orange"
+            } home-panel home-panel1`}
             onMouseEnter={handleParallaxMouseEnter(0)}
             onMouseLeave={handleParallaxMouseLeave(0)}
           >
             <MemoizedWindowTab text={"Informacje o nas"} />
-            <p dangerouslySetInnerHTML={{ __html: text_output }} />
+            <p dangerouslySetInnerHTML={{ __html: text_output }} /> 
           </div>
-        </MouseParallaxChild>
+        </div>
       </FadeInSection>
       <FadeInSection>
-      <div className="panel2-container">
-        <MouseParallaxChild
-          className={`${theme === "green" ? "home-panel-green" : "home-panel-orange"} home-panel home-panel2`}
-          factorX={factorX[1]}
-          factorY={factorY[1]}
+        <div className="panel2-container">
+          <div
+            className={`${
+              theme === "green" ? "home-panel-green" : "home-panel-orange"
+            } home-panel home-panel2`}
+            // factorX={factorX[1]}
+            // factorY={factorY[1]}
+          >
+            <div
+              className="panel-container"
+              onMouseEnter={handleParallaxMouseEnter(1)}
+              onMouseLeave={handleParallaxMouseLeave(1)}
+            >
+              <MemoizedWindowTab text={"Nasze projekty"} />
+              <ProjectsPanel />
+            </div>
+          </div>
+        </div>
+      </FadeInSection>
+      <FadeInSection>
+        <div className="panel3-container"
+        // factorX={factorX[2]} factorY={factorY[2]}
         >
           <div
-            className="panel-container"
-            onMouseEnter={handleParallaxMouseEnter(1)}
-            onMouseLeave={handleParallaxMouseLeave(1)}
+            className={`${
+              theme === "green" ? "home-panel-green" : "home-panel-orange"
+            } home-panel home-panel3`}
+            onMouseEnter={handleParallaxMouseEnter(2)}
+            onMouseLeave={handleParallaxMouseLeave(2)}
           >
-            <MemoizedWindowTab text={"Nasze projekty"} />
-            <ProjectsPanel />
+            <MemoizedWindowTab text={"Dołącz do nas"} />
+            <JoinButton/>
           </div>
-        </MouseParallaxChild>
-      </div>
-      </FadeInSection>
-      <FadeInSection>
-      <MouseParallaxChild
-        
-        factorX={factorX[2]}
-        factorY={factorY[2]}
-      >
-        <div
-          className={`${theme === "green" ? "home-panel-green" : "home-panel-orange"} home-panel home-panel3`}
-          onMouseEnter={handleParallaxMouseEnter(2)}
-          onMouseLeave={handleParallaxMouseLeave(2)}
-        >
-          <MemoizedWindowTab text={"Dołącz do nas"} />
         </div>
-      </MouseParallaxChild>
       </FadeInSection>
     </MouseParallaxContainer>
   );

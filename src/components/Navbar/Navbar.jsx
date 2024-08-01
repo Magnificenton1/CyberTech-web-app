@@ -2,8 +2,9 @@ import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 import { useState } from "react";
 
-import { useTheme } from "../../ThemeContext";
+import { useTheme } from "../../useTheme";
 import ReactSwitch from "react-switch";
+import { LogoTextNavbar } from "./LogoTextNavbar";
 
 export const Navbar = () => {
   const [selectedNavLink, setSelectedNavLink] = useState("home");
@@ -27,10 +28,11 @@ export const Navbar = () => {
     <nav>
       <div className={`scroll-watcher-${theme} scroll-watcher`}></div>
       <NavLink className="cybertech-title" to="/">
-        placeholder
+        <LogoTextNavbar/>
       </NavLink>
+      <div style={{ height: "100%", width: "100%", backgroundColor: "white"}}></div>
       {/* ten navlink jest na cała stronę - naprawić! */}
-      <ul>
+      <ul className={`ul-${theme}`}>
         <li>
           <div className="switch">
             <ReactSwitch
@@ -51,7 +53,7 @@ export const Navbar = () => {
             onClick={() => handleSelected("home")}
           >
             {/* <FaHouseChimney /> */}
-            {selectedNavLink === "home" ? "<Home/>" : "Home"}
+            {selectedNavLink === "home" ? "{<Home/>}" : "Home"}
           </NavLink>
         </li>
         <li>

@@ -8,8 +8,9 @@
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 100px;
+  padding-top: 30px;
+  padding-bottom: 20px;
   min-height: 1200px;
-
   transition: background-color 0.5s ease;
 }
 .home-container-orange {
@@ -18,7 +19,13 @@
 .home-container-green {
   background-color: rgb(255, 255, 255);
 }
-
+.panel1-container,.panel3-container{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  border: solid 1px red;
+}
 .panel2-container {
   display: flex;
   flex-direction: row;
@@ -26,8 +33,11 @@
   align-items: flex-end;
   width: 100%;
   height: auto;
-  /* border: solid 1px red; */
+  border: solid 1px red;
+
+  margin-bottom: 20px;
 }
+
 .home-panel {
   font-family: myFont;
   transition: box-shadow 1s ease;
@@ -36,7 +46,6 @@
   border-radius: 0.4rem;
   box-shadow: 0px 0px 16px 10px rgba(0, 0, 0, 0.253);
 
-  margin-bottom: 20px;
   box-sizing: border-box;
   overflow-wrap: break-word;
   white-space: pre-wrap;
@@ -58,21 +67,22 @@
   width: 40%;
   min-width: 350px;
   height: auto;
-  min-height: 320px;
+  min-height: 350px;
 }
 
 .home-panel2 {
   height: auto;
-  width: 45%;
+  width: 55%;
   min-width: 350px;
 }
 
 .home-panel3 {
-  min-height: 220px;
+  min-height: 300px;
   height: auto;
-  width: 30%;
+  width: 35%;
   min-width: 350px;
 }
+/* trza dodac clamp height żeby było ładnie i mobile support */
 p {
   padding: 10px;
   font-family: myFont;
@@ -82,39 +92,8 @@ p {
   .home-container {
     align-items: center;
   }
-  .panel2-container {
+  .panel2-container ,.panel1-container ,.panel3-container{
     justify-content: center;
+    align-items: center;
   }
 }
-
-/* @media (max-width: 1200px) {
-    .home-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-  
-      padding: 20px;
-      border: solid pink 1px;
-      height: 1500px;
-    }
-  
-    .home-panel1{
-      flex: 1 1 95%;
-      margin: 10px 0;
-      margin-right: 0px;
-    }
-    .home-panel2{
-      margin-top: 0px;
-      margin-left: 0px;
-      flex: 1 1 95%;
-      margin: 10px 0;
-    }
-    .home-panel3{
-      margin-top: 0px;
-      flex: 1 1 95%;
-      margin: 10px 0;
-      margin-right: 0px;
-      margin-left: 0;
-  
-    }
-  } */

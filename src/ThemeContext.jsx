@@ -1,14 +1,21 @@
-import{ createContext, useState, useContext } from 'react';
+import{ createContext, useState, useEffect} from 'react';
+import PropTypes from 'prop-types';
 
 // Create a context with 'green' as the default value
-const ThemeContext = createContext();
+export const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState('green');
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem('theme') || 'green';
+  });
 
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === 'green' ? 'orange' : 'green'));
   };
+
+  useEffect(() => {
+    localStorage.setItem('theme', theme);
+  }, [theme]);
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
@@ -17,5 +24,6 @@ export const ThemeProvider = ({ children }) => {
   );
 };
 
-// Custom hook to use the theme
-export const useTheme = () => useContext(ThemeContext);
+ThemeProvider.propTypes = {
+  children: PropTypes.node.isRequired, // Validate that children is a valid React node
+};

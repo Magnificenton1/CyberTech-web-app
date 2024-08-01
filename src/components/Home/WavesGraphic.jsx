@@ -1,4 +1,4 @@
-import { useTheme } from "../../ThemeContext";
+import { useTheme } from "../../useTheme";
 import "./Home.css";
 export const WavesGraphic = () => {
   const { theme } = useTheme();
