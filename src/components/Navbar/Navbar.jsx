@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 import { useState } from "react";
-import { useTheme } from "../../useTheme";
+import { useTheme } from "../../components/Theme/useTheme";
 import ReactSwitch from "react-switch";
 import { LogoTextNavbar } from "./LogoTextNavbar";
 import { LogoNavlink2 } from "./LogoNavlink2";
@@ -45,7 +45,7 @@ export const Navbar = () => {
         />
       </div>
       <div
-        style={{ height: "100%", width: "100%", backgroundColor: "white" }}
+        style={{ height: "100%", width: "10%", backgroundColor: "white",}}
       ></div>
       <ul className={`ul-${theme}`}>
 
@@ -103,6 +103,9 @@ export const Navbar = () => {
           </NavLink>
         </li>
       </ul>
+      <div
+        style={{ height: "100%", width: "20%", backgroundColor: "white",}}
+      ></div>
       <div
         className={`hamburger ${isMenuOpen ? "active" : ""}`}
         onClick={() => handleMenuOpen()}

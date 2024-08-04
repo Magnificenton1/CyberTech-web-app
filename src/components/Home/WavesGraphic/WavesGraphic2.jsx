@@ -1,11 +1,11 @@
-import { useTheme } from "../../useTheme";
-import "./Home.css";
+import { useTheme } from "../../Theme/useTheme";
+import "./../Home.css";
 
 export const WavesGraphic2 = () => {
   const { theme } = useTheme();
-  
+
   const getFillColor = (color1, color2) => {
-    return theme === 'green' ? color1 : color2;
+    return theme === "green" ? color1 : color2;
   };
 
   return (
@@ -18,7 +18,12 @@ export const WavesGraphic2 = () => {
         xmlns="http://www.w3.org/2000/svg"
         version="1.1"
       >
-        <rect width="960" height="128" y="413" fill={getFillColor("#ffffff", "#100c0c")} />
+        <rect
+          width="960"
+          height="128"
+          y="413"
+          fill={getFillColor("#ffffff", "#100c0c")}
+        />
         <path
           d="M0 413L22.8 417.3C45.7 421.7 91.3 430.3 137 430.8C182.7 431.3 228.3 423.7 274 425.5C319.7 427.3 365.3 438.7 411.2 438.2C457 437.7 503 425.3 548.8 421.7C594.7 418 640.3 423 686 425.2C731.7 427.3 777.3 426.7 823 428.7C868.7 430.7 914.3 435.3 937.2 437.7L960 440L960 541L937.2 541C914.3 541 868.7 541 823 541C777.3 541 731.7 541 686 541C640.3 541 594.7 541 548.8 541C503 541 457 541 411.2 541C365.3 541 319.7 541 274 541C228.3 541 182.7 541 137 541C91.3 541 45.7 541 22.8 541L0 541Z"
           fill={getFillColor("#3dff97", "#6a0000")}
@@ -37,7 +42,7 @@ export const WavesGraphic2 = () => {
         ></path>
         <path
           d="M0 524L22.8 523.3C45.7 522.7 91.3 521.3 137 519.8C182.7 518.3 228.3 516.7 274 515.5C319.7 514.3 365.3 513.7 411.2 514.7C457 515.7 503 518.3 548.8 519.8C594.7 521.3 640.3 521.7 686 520.3C731.7 519 777.3 516 823 516.3C868.7 516.7 914.3 520.3 937.2 522.2L960 524L960 541L937.2 541C914.3 541 868.7 541 823 541C777.3 541 731.7 541 686 541C640.3 541 594.7 541 548.8 541C503 541 457 541 411.2 541C365.3 541 319.7 541 274 541C228.3 541 182.7 541 137 541C91.3 541 45.7 541 22.8 541L0 541Z"
-          fill={getFillColor("#100c0c","#f3f3f3")}
+          fill={getFillColor("#100c0c", "#f3f3f3")}
         ></path>
       </svg>
     </div>

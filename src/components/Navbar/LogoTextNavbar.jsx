@@ -1,5 +1,5 @@
 
-import { useTheme } from "../../useTheme";
+import { useTheme } from "../Theme/useTheme";
 
 export const LogoTextNavbar = () => {
   const { theme } = useTheme();

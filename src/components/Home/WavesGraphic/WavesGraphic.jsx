@@ -1,10 +1,11 @@
-import { useTheme } from "../../useTheme";
-import "./Home.css";
+import { useTheme } from "../../Theme/useTheme";
+import "./../Home.css";
+
 export const WavesGraphic = () => {
   const { theme } = useTheme();
-  
+
   const getFillColor = (color1, color2) => {
-    return theme === 'green' ? color1 : color2;
+    return theme === "green" ? color1 : color2;
   };
 
   return (
@@ -17,7 +18,11 @@ export const WavesGraphic = () => {
         xmlns="http://www.w3.org/2000/svg"
         version="1.1"
       >
-        <rect width="960" height="116" fill={getFillColor("#ffffff", "#100c0c")} />
+        <rect
+          width="960"
+          height="116"
+          fill={getFillColor("#ffffff", "#100c0c")}
+        />
         <path
           d="M0 97L22.8 98.8C45.7 100.7 91.3 104.3 137 104.7C182.7 105 228.3 102 274 103.5C319.7 105 365.3 111 411.2 112.7C457 114.3 503 111.7 548.8 105.8C594.7 100 640.3 91 686 93.8C731.7 96.7 777.3 111.3 823 115.7C868.7 120 914.3 114 937.2 111L960 108L960 0L937.2 0C914.3 0 868.7 0 823 0C777.3 0 731.7 0 686 0C640.3 0 594.7 0 548.8 0C503 0 457 0 411.2 0C365.3 0 319.7 0 274 0C228.3 0 182.7 0 137 0C91.3 0 45.7 0 22.8 0L0 0Z"
           fill={getFillColor("#3dff97", "#6a0000")}
@@ -36,7 +41,7 @@ export const WavesGraphic = () => {
         ></path>
         <path
           d="M0 32L22.8 29.7C45.7 27.3 91.3 22.7 137 22.3C182.7 22 228.3 26 274 28.8C319.7 31.7 365.3 33.3 411.2 30.5C457 27.7 503 20.3 548.8 17.2C594.7 14 640.3 15 686 15.5C731.7 16 777.3 16 823 17.5C868.7 19 914.3 22 937.2 23.5L960 25L960 0L937.2 0C914.3 0 868.7 0 823 0C777.3 0 731.7 0 686 0C640.3 0 594.7 0 548.8 0C503 0 457 0 411.2 0C365.3 0 319.7 0 274 0C228.3 0 182.7 0 137 0C91.3 0 45.7 0 22.8 0L0 0Z"
-          fill={getFillColor("#100c0c","#f3f3f3")}
+          fill={getFillColor("#100c0c", "#f3f3f3")}
         ></path>
       </svg>
     </div>

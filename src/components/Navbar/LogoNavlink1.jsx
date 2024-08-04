@@ -1,4 +1,4 @@
-import { useTheme } from "../../useTheme";
+import { useTheme } from "../../components/Theme/useTheme";
 
 export const LogoNavlink1 = () => {
   const { theme } = useTheme();

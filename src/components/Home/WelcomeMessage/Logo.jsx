@@ -1,4 +1,4 @@
-import { useTheme } from "../../../useTheme";
+import { useTheme } from "../../Theme/useTheme";
 import "./WelcomeMessage.css";
 
 export const Logo = () => {

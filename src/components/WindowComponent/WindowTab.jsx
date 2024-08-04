@@ -27,7 +27,6 @@ export const WindowTab = ({ text }) => {
           <button className="window-close-tab"><IoIosClose /></button>
         </div>
       </div>
-      <div></div>
     </>
   );
 };

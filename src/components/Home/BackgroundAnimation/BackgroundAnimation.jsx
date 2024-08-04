@@ -1,8 +1,8 @@
-import { useTheme } from "../../../useTheme";
+import { useTheme } from "../../Theme/useTheme";
 import "./BackgroundAnimation.css";
 import { useRef, useEffect, useState } from "react";
 import { gsap, Circ } from "gsap";
-import useOnScreen from "./useOnScreen";
+import useOnScreen from "../../UseOnScreen/useOnScreen";
 
 export const BackgroundAnimation = () => {
   const { theme } = useTheme();
@@ -33,10 +33,10 @@ export const BackgroundAnimation = () => {
 
     // create points
     const points = [];
-    for (let x = 0; x < width; x += width / 6) {
-      for (let y = 0; y < height; y += height / 6) {
-        const px = x + (Math.random() * width) / 6;
-        const py = y + (Math.random() * height) / 6;
+    for (let x = 0; x < width; x += width / 8) {
+      for (let y = 0; y < height; y += height / 8) {
+        const px = x + (Math.random() * width) / 8;
+        const py = y + (Math.random() * height) / 8;
         const p = { x: px, originX: px, y: py, originY: py };
         points.push(p);
       }
@@ -218,7 +218,7 @@ export const BackgroundAnimation = () => {
 
   return (
     <div className={`large-header large-header-${theme}`} ref={largeHeaderRef}>
-      <div ref={ref}> 
+      <div ref={ref}>
         <canvas id="demo-canvas" ref={canvasRef}></canvas>
       </div>
     </div>

@@ -29,7 +29,6 @@
 .text-tab{
     display: flex;
     align-items: center;
-    /* justify-content: center; */
     height: 100%;
     width: 60%;
     min-width: 120px;
@@ -49,7 +48,11 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-
+}
+.command-icon{
+    font-size: 20px;
+    margin-right: 6px;
+    min-width: 20px;
 }
 .close-tab{
     display: flex;
@@ -63,10 +66,6 @@
     color: white;
     background-color: 
     #100c0c;
-}
-.command-icon{
-    font-size: large;
-    margin-right: 6px;
 }
 .new-tab{
     display: flex;
@@ -83,9 +82,7 @@
     background-color: #383434;
 }
 .new-tab-fill{
-    background-color: #100c0c
-
-    ;
+    background-color: #100c0c;
 }
 .minimalize-tab{
     width: 50px;
@@ -136,3 +133,8 @@
 .minimalize-tab:hover{
     background-color: #4b4646;
 }
+@media (max-width: 500px) {
+    .command-icon{
+        display: none;
+    }
+  }

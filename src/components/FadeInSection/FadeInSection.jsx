@@ -1,5 +1,6 @@
 import { useRef, useState, useEffect } from 'react';
 import './FadeInSection.css';
+import PropTypes from 'prop-types';
 
 export const FadeInSection = (props) => {
     const [isVisible, setIsVisible] = useState(false);
@@ -32,3 +33,8 @@ export const FadeInSection = (props) => {
       </div>
     );
   }
+
+
+  FadeInSection.propTypes = {
+    children: PropTypes.node.isRequired, // Validate that children is a valid React node
+  };

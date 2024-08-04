@@ -1,0 +1,39 @@
+.window-panel {
+    font-family: myFont;
+    transition: box-shadow 1s ease;
+    background-color: #100c0c;
+    color: rgb(255, 255, 255);
+    border-radius: 0.4rem;
+    box-shadow: 0px 0px 16px 10px rgba(0, 0, 0, 0.253);
+  
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+  }
+
+  .window-panel-orange{
+    box-shadow: 0px 0px 16px 10px rgba(255, 255, 255, 0.253);
+  }
+  .window-panel-green{
+    box-shadow: 0px 0px 16px 10px rgba(0, 0, 0, 0.253);
+  }
+
+  .window-panel-1 {
+    width: 40%;
+    min-width: 350px;
+    height: auto;
+    min-height: 350px;
+  }
+  
+  .window-panel-2 {
+    height: auto;
+    width: 55%;
+    min-width: 350px;
+  }
+  
+  .window-panel-3 {
+    min-height: 300px;
+    height: auto;
+    width: 35%;
+    min-width: 350px;
+  }
