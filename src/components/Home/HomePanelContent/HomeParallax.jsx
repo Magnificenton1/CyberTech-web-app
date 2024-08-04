@@ -1,10 +1,15 @@
+import {
+  MouseParallaxContainer,
+  MouseParallaxChild,
+} from "react-parallax-mouse";
 import "./HomePanels.css";
-import { memo } from "react";
+import { memo} from "react";
 import { ProjectsPanel } from "./ProjectsPanel/ProjectsPanel";
 import { FadeInSection } from "../../FadeInSection/FadeInSection";
 import { useTheme } from "../../Theme/useTheme";
 import { JoinButton } from "./JoinButton/JoinButton";
 import { WindowPanel } from "../../WindowComponent/WindowPanel";
+import { PanelBackground } from "../../BackgroundAnimation/PanelBackground";
 
 export const HomeParallaxComponent = () => {
   // MEMOIZATION - optymalizacja!
@@ -24,35 +29,48 @@ Jesteśmy otwarci na wszystkich – potrzebujesz jedynie motywacji i podstawowyc
 `;
 
   return (
-    <div
+    <MouseParallaxContainer
+      globalFactorX={0.1}
+      globalFactorY={0.1}
       className={`${
         theme === "green" ? "home-container-green" : "home-container-orange"
       } home-container`}
     >
+      <PanelBackground/>
       <FadeInSection>
-        <div className="panel1-container">
+        <MouseParallaxChild
+          className="panel1-container"
+          factorX={-0.3}
+          factorY={-0.1}
+        >
           <WindowPanel text={"Informacje o nas"} class_number={"1"}>
-            <p
-              dangerouslySetInnerHTML={{ __html: text_output }}
-            />
+            <p dangerouslySetInnerHTML={{ __html: text_output }} />
           </WindowPanel>
-        </div>
+        </MouseParallaxChild>
       </FadeInSection>
       <FadeInSection>
-        <div className="panel2-container">
+        <MouseParallaxChild
+          className="panel2-container"
+          factorX={0.1}
+          factorY={-0.2}
+        >
           <WindowPanel text={"Nasze projekty!"} class_number={"2"}>
             <ProjectsPanel />
           </WindowPanel>
-        </div>
+        </MouseParallaxChild>
       </FadeInSection>
       <FadeInSection>
-        <div className="panel3-container">
+        <MouseParallaxChild
+          className="panel3-container"
+          factorX={-0.1}
+          factorY={0.3}
+        >
           <WindowPanel text={"Dołącz do nas!"} class_number={"3"}>
             <JoinButton />
           </WindowPanel>
-        </div>
+        </MouseParallaxChild>
       </FadeInSection>
-    </div>
+    </MouseParallaxContainer>
   );
 };
 

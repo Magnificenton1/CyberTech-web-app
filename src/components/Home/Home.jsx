@@ -1,17 +1,15 @@
 import { memo } from "react";
-import { BackgroundAnimation } from "./BackgroundAnimation/BackgroundAnimation";
+import { BackgroundAnimation } from "../BackgroundAnimation/BackgroundAnimation";
 
 import { HomeParallax } from "./HomePanelContent/HomeParallax";
 import { WelcomeMessage } from "./WelcomeMessage/WelcomeMessage";
 
 export const HomeComponent = () => {
   return (
-    <div className="home-page-container">
+    <div>
       <BackgroundAnimation />
       <WelcomeMessage />
-      {/* <WavesGraphic /> */}
       <HomeParallax />
-      {/* <WavesGraphic2 /> */}
     </div>
   );
 };

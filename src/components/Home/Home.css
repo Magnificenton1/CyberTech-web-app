@@ -1,15 +1,1 @@
-.home-page-container {
-  width: 100%;
-  height: 100%;
-  /* border: solid red 3px; */
-}
-.top-graphic{
-  margin-bottom: -5px;
-}
-svg path {
-  transition: fill 0.5s ease;
-}
-svg rect {
-  transition: fill 0.5s ease;
-}
 

@@ -9,6 +9,7 @@
     box-sizing: border-box;
     overflow-wrap: break-word;
     white-space: pre-wrap;
+    
   }
 
   .window-panel-orange{
@@ -38,5 +39,5 @@
     /* height: auto; */
     width: 35%;
     min-width: 350px;
-    max-width: 1000px;
+    max-width: 700px;
   }
