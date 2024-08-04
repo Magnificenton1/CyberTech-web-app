@@ -6,26 +6,35 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content:center;
   padding: 100px;
   padding-top: 30px;
   padding-bottom: 20px;
-  min-height: 1200px;
-  transition: background-color 0.5s ease;
+  min-height: 2000px;
+  max-height: 2200px;
+  /* border: solid red 10px; */
 }
 .home-container-orange {
-  background-color: rgb(16,12,12);
+  background-image: url("./backgroundsvgorange.svg");
+  background-size:cover; /* Adjust based on your preference */
+  background-repeat:repeat; /* Prevent tiling */
+  background-position: center; /* Center the SVG */
 }
 .home-container-green {
-  background-color: rgb(255, 255, 255);
+  background-image: url("./backgroundsvg.svg");
+  background-size:cover; /* Adjust based on your preference */
+  background-repeat:repeat; /* Prevent tiling */
+  background-position: center; /* Center the SVG */
 }
-.panel1-container,.panel3-container{
+.panel1-container,
+.panel3-container {
   display: flex;
   flex-direction: row;
   width: 100%;
   height: auto;
+  /* border: solid blue 10px; */
 
-  margin-bottom: 20px;
+  margin-bottom: 80px;
 }
 .panel2-container {
   display: flex;
@@ -34,22 +43,25 @@
   align-items: flex-end;
   width: 100%;
   height: auto;
-
-  margin-bottom: 20px;
+  /* border: solid blue 10px; */
+  margin-bottom: 80px;
 }
-p{
+p {
   text-align: center;
   padding: 12px;
-  font-size: clamp(0.8rem, 1vw + 0.2rem , 1.3rem);
+  font-size: clamp(0.8rem, 1vw + 0.2rem, 1.3rem);
   /* font-size: 1.3rem; */
 }
 
-
-@media (max-width: 500px) {
+@media (max-width: 500px), (min-width: 3000px) {
   .home-container {
     align-items: center;
+    min-height: 1500px;
+    max-height: 1600px;
   }
-  .panel2-container ,.panel1-container ,.panel3-container{
+  .panel2-container,
+  .panel1-container,
+  .panel3-container {
     justify-content: center;
     align-items: center;
   }

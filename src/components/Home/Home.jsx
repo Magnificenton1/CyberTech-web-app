@@ -2,8 +2,6 @@ import { memo } from "react";
 import { BackgroundAnimation } from "./BackgroundAnimation/BackgroundAnimation";
 
 import { HomeParallax } from "./HomePanelContent/HomeParallax";
-import { WavesGraphic } from "./WavesGraphic/WavesGraphic";
-import { WavesGraphic2 } from "./WavesGraphic/WavesGraphic2";
 import { WelcomeMessage } from "./WelcomeMessage/WelcomeMessage";
 
 export const HomeComponent = () => {
@@ -11,9 +9,9 @@ export const HomeComponent = () => {
     <div className="home-page-container">
       <BackgroundAnimation />
       <WelcomeMessage />
-      <WavesGraphic />
+      {/* <WavesGraphic /> */}
       <HomeParallax />
-      <WavesGraphic2 />
+      {/* <WavesGraphic2 /> */}
     </div>
   );
 };

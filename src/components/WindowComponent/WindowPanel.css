@@ -21,19 +21,22 @@
   .window-panel-1 {
     width: 40%;
     min-width: 350px;
-    height: auto;
+    max-width: 1300px;
+    /* height: auto; */
     min-height: 350px;
   }
   
   .window-panel-2 {
-    height: auto;
+    /* height: auto; */
     width: 55%;
     min-width: 350px;
+    max-width: 1000px;
   }
   
   .window-panel-3 {
     min-height: 300px;
-    height: auto;
+    /* height: auto; */
     width: 35%;
     min-width: 350px;
+    max-width: 1000px;
   }

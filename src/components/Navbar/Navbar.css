@@ -29,7 +29,7 @@ nav {
   transition: background-color 0.5s ease;
 }
 .scroll-watcher-green {
-  background-color: rgb(0, 226, 106);
+  background-color: #00ff77;
 }
 .scroll-watcher-orange {
   background-color: #f85c2c;

@@ -19,7 +19,7 @@ export const BackgroundAnimation = () => {
 
     setFirstLoad(false);
     const width = window.innerWidth;
-    const height = window.innerHeight * 1;
+    const height = window.innerHeight;
     const target = { x: width / 2, y: height / 2 };
     let animateHeader = true;
 
@@ -34,7 +34,7 @@ export const BackgroundAnimation = () => {
     // create points
     const points = [];
     for (let x = 0; x < width; x += width / 8) {
-      for (let y = 0; y < height; y += height / 8) {
+      for (let y = 0; y < height-200; y += height / 8) {
         const px = x + (Math.random() * width) / 8;
         const py = y + (Math.random() * height) / 8;
         const p = { x: px, originX: px, y: py, originY: py };
