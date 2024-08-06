@@ -1,9 +1,9 @@
 .window-tab{
     /* border: solid 1px black; */
-    height: 50px;
+    height: 45px;
     width: 100%;
     /* padding-top: 8px; */
-    background-color: #383434;
+    background-color: #2E2E2E;
     border-top-left-radius: 0.4rem;
     border-top-right-radius: 0.4rem;
 
@@ -12,7 +12,7 @@
     justify-content: space-between;
 }
 .tab-section-1{
-    margin-top: 10px;
+    margin-top: 8px;
     display: flex;
     flex-direction: row;
     height: 100% - 10px;
@@ -37,7 +37,7 @@
     margin-left: 8.75px;
     border-top-left-radius: 0.5rem;
 
-    font-size: 15px;
+    font-size: 18px;
     color: white;
     font-family: 'Segoe UI';
 
@@ -79,7 +79,7 @@
     align-items: center;
     justify-content: center;
     height: 100%;
-    background-color: #383434;
+    background-color: #2E2E2E;
 }
 .new-tab-fill{
     background-color: #100c0c;

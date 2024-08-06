@@ -15,7 +15,8 @@
 .welcome-container {
   /* border: solid blue 2px; */
   /* min-height: 500px; */
-  height: clamp(500px, 85vh, 1000px);
+  height: 85vh;
+  min-height: 320px;
   /* height: 80vh; */
   display: flex;
   flex-direction: row;

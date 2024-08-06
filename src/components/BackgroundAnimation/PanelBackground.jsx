@@ -32,7 +32,7 @@ export const PanelBackground = () => {
 
     const points = [];
     for (let x = 0; x < width; x += width / 6) {
-      for (let y = 0; y < height - 150; y += height / 6) {
+      for (let y = 0; y < height - 400; y += height / 6) {
         if (y === 0) {
           continue;
         }
@@ -139,16 +139,18 @@ export const PanelBackground = () => {
 
     function shiftPoint(p) {
       gsap.to(p, {
-        duration: 0.5 + Math.random(), // duration for fading out
+        duration: 1 + Math.random(), // duration for fading out
         opacity: 0,
+        boxShadow: "0px 0px 0px 0px black",
         onComplete: function () {
           gsap.set(p, {
             x: p.originX - 50 + Math.random() * 100,
             y: p.originY - 50 + Math.random() * 100,
           });
           gsap.to(p, {
-            duration: 0.5 + Math.random(), // duration for fading in
+            duration: 0.1, // duration for fading in
             opacity: 1,
+            boxShadow: "0px 0px 16px 10px white",
             onComplete: function () {
               shiftPoint(p);
             },
@@ -182,7 +184,7 @@ export const PanelBackground = () => {
         ctx.fillStyle =
           theme === "green"
             ? `rgba(0, 255, 119,${this.pos.opacity})`
-            : `rgba(248, 92, 44,${this.pos.opacity})`;
+            : `rgba(248, 92, 44,${this.pos.opacity})`; 
         ctx.fill();
       };
     }

@@ -1,1 +1,13 @@
-
+.home-green{
+    background-color: #100c0c;
+}
+.home-orange{
+    background-color: rgb(243, 243, 243);
+}
+.home{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transition: background-color 0.5s ease;
+    z-index: -100;
+}

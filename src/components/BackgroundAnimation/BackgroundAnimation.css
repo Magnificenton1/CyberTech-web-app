@@ -1,19 +1,10 @@
-.large-header-green {
-  background-color: rgb(16, 12, 12);
-}
-
-.large-header-orange {
-  background-color: rgb(243, 243, 243);
-}
-
 .large-header {
   position: absolute;
   width: 100%;
   /* height: 20px; */
-  z-index: -20;
+  z-index: -2;
   top: 0;
   left: 0;
   overflow: hidden;
   transition: background-color 0.5s ease;
-  border: solid 1px red;
 }

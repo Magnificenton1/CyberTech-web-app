@@ -1,6 +1,6 @@
 import { useTheme } from "../Theme/useTheme";
 import "./BackgroundAnimation.css";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState, useCallback } from "react";
 import { gsap, Circ } from "gsap";
 import useOnScreen from "../UseOnScreen/useOnScreen";
 
@@ -9,12 +9,24 @@ export const BackgroundAnimation = () => {
   const canvasRef = useRef(null);
   const largeHeaderRef = useRef(null);
   const [ref, isVisible] = useOnScreen({ threshold: 0.1 });
-
-  // this is used because if you refresh the page at the position where you are not looking at the animation, there will be nothing for a while
-  // fix to useOnScreen
+  const [resizeFinished, setResizeFinished] = useState(false);
   const [firstLoad, setFirstLoad] = useState(true);
 
+  const debounce = (func, wait) => {
+    let timeout;
+    return (...args) => {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => func.apply(this, args), wait);
+    };
+  };
+
+  const handleResize = useCallback(() => {
+    setResizeFinished((prev) => !prev);
+  }, []);
+
   useEffect(() => {
+    const debouncedResizeHandler = debounce(handleResize, 200);
+
     if (!isVisible && !firstLoad) return;
 
     setFirstLoad(false);
@@ -31,9 +43,8 @@ export const BackgroundAnimation = () => {
     canvas.height = height;
     const ctx = canvas.getContext("2d");
 
-    // create points
     const points = [];
-    for (let x = -150; x < width +150; x += width / 10) {
+    for (let x = -150; x < width + 150; x += width / 10) {
       for (let y = 0; y < height - 150; y += height / 8) {
         const px = x + (Math.random() * width) / 10;
         const py = y + (Math.random() * height) / 8;
@@ -42,7 +53,6 @@ export const BackgroundAnimation = () => {
       }
     }
 
-    // for each point find the 5 closest points
     for (let i = 0; i < points.length; i++) {
       const closest = [];
       const p1 = points[i];
@@ -72,7 +82,6 @@ export const BackgroundAnimation = () => {
       p1.closest = closest;
     }
 
-    // assign a circle to each point
     for (let i in points) {
       const c = new Circle(
         points[i],
@@ -82,12 +91,11 @@ export const BackgroundAnimation = () => {
       points[i].circle = c;
     }
 
-    // Event handling
     if (!("ontouchstart" in window)) {
       window.addEventListener("mousemove", mouseMove);
     }
     window.addEventListener("scroll", scrollCheck);
-    window.addEventListener("resize", resize);
+    window.addEventListener("resize", debouncedResizeHandler);
 
     function mouseMove(e) {
       let posx = 0;
@@ -113,15 +121,6 @@ export const BackgroundAnimation = () => {
       animateHeader = document.body.scrollTop <= height;
     }
 
-    function resize() {
-      const width = window.innerWidth;
-      const height = window.innerHeight;
-      largeHeader.style.height = `${height}px`;
-      canvas.width = width;
-      canvas.height = height;
-    }
-
-    // animation
     function initAnimation() {
       animate();
       for (let i in points) {
@@ -133,7 +132,6 @@ export const BackgroundAnimation = () => {
       if (animateHeader) {
         ctx.clearRect(0, 0, width, height);
         for (let i in points) {
-          // detect points in range
           if (Math.abs(getDistance(target, points[i])) < 10000) {
             points[i].active = 0.4;
             points[i].circle.active = 0.8;
@@ -167,7 +165,6 @@ export const BackgroundAnimation = () => {
       });
     }
 
-    // Canvas manipulation
     function drawLines(p) {
       if (!p.active) return;
       for (let i in p.closest) {
@@ -201,23 +198,21 @@ export const BackgroundAnimation = () => {
       };
     }
 
-    // Util
     function getDistance(p1, p2) {
       return Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2);
     }
 
     initAnimation();
 
-    // Cleanup on unmount
     return () => {
       window.removeEventListener("mousemove", mouseMove);
       window.removeEventListener("scroll", scrollCheck);
-      window.removeEventListener("resize", resize);
+      window.removeEventListener("resize", debouncedResizeHandler);
     };
-  }, [isVisible, theme, firstLoad]);
+  }, [isVisible, theme, firstLoad, resizeFinished, handleResize]);
 
   return (
-    <div className={`large-header large-header-${theme}`} ref={largeHeaderRef}>
+    <div className="large-header" ref={largeHeaderRef}>
       <div ref={ref}>
         <canvas ref={canvasRef}></canvas>
       </div>

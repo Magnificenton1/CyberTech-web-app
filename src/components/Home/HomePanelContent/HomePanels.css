@@ -75,7 +75,7 @@ p {
   }
 }
 
-@media (min-width: 3000px) {
+/* @media (min-width: 3000px) {
   .home-container-orange {
     background: rgb(16, 12, 12);
     background: linear-gradient(
@@ -94,4 +94,4 @@ p {
       rgba(255, 255, 255, 1) 100%
     );
   }
-}
+} */
