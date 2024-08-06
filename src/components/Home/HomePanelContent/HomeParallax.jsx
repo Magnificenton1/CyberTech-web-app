@@ -9,7 +9,7 @@ import { FadeInSection } from "../../FadeInSection/FadeInSection";
 import { useTheme } from "../../Theme/useTheme";
 import { JoinButton } from "./JoinButton/JoinButton";
 import { WindowPanel } from "../../WindowComponent/WindowPanel";
-import { PanelBackground } from "../../BackgroundAnimation/PanelBackground";
+// import { PanelBackground } from "../../BackgroundAnimation/PanelBackground";
 
 export const HomeParallaxComponent = () => {
   // MEMOIZATION - optymalizacja!
@@ -36,7 +36,7 @@ Jesteśmy otwarci na wszystkich – potrzebujesz jedynie motywacji i podstawowyc
         theme === "green" ? "home-container-green" : "home-container-orange"
       } home-container`}
     >
-      <PanelBackground/>
+      {/* <PanelBackground/> */}
       <FadeInSection>
         <MouseParallaxChild
           className="panel1-container"
