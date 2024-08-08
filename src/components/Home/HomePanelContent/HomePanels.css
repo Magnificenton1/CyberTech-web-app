@@ -1,6 +1,6 @@
 @font-face {
   font-family: myFont;
-  src: url(./../../../assets/OCR-A-font.ttf);
+  src: url(./../../../assets/lucon.ttf);
 }
 
 path {
@@ -13,27 +13,26 @@ rect {
   position: relative;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   justify-content: center;
+
+  width: 100%;
+  height: auto;
+
   padding: 100px;
-  padding-top: 30px;
-  padding-bottom: 20px;
-  min-height: 2000px;
-  max-height: 2200px;
+  padding-top: 230px;
+  padding-bottom: 200px;
 
   transition: background-image 0.5s ease;
+  background-size: 100% 100%;
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  background-position: center; 
 }
 .home-container-orange {
   background-image: url("./backgroundsvgorange.svg");
-  background-size: cover; 
-  background-repeat: repeat; 
-  background-position: center; 
 }
 .home-container-green {
   background-image: url("./backgroundsvg.svg");
-  background-size: cover; 
-  background-repeat: repeat; 
-  background-position: center; 
 }
 .panel1-container,
 .panel3-container {
@@ -55,10 +54,34 @@ rect {
   margin-bottom: 80px;
 }
 p {
-  text-align: center;
   padding: 12px;
   font-size: clamp(0.8rem, 1vw + 0.2rem, 1.3rem);
-  /* font-size: 1.3rem; */
+  font-family: myFont;
+  line-height: 115%;
+}
+p span{
+  font-family: myFont;
+}
+.blinking-cursor {
+  font-size: clamp(0.8rem, 1vw + 0.2rem, 1.3rem);
+  color: white;
+  font-family: myFont;
+}
+.blinking-cursor-animation{
+  -webkit-animation: 1.5s blink step-end infinite;
+  -moz-animation: 1.5s blink step-end infinite;
+  -ms-animation: 1.5s blink step-end infinite;
+  -o-animation: 1.5s blink step-end infinite;
+  animation: 1.5s blink step-end infinite;
+}
+
+@keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
 }
 
 @media (max-width: 500px), (min-width: 3000px) {

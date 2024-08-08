@@ -115,5 +115,8 @@ function CustomSlider({ children }) {
 export default CustomSlider;
 
 CustomSlider.propTypes = {
-    children: PropTypes.string.isRequired,
-  };
+  children: PropTypes.oneOfType([
+    PropTypes.string, // Accepts a string
+    PropTypes.arrayOf(PropTypes.node), // Accepts an array of React nodes
+  ]).isRequired, // Specify that at least one type is required
+};

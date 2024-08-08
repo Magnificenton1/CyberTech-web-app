@@ -50,9 +50,9 @@ export const BackgroundAnimation = () => {
     const qtree = new Quadtree(boundary, 4);
 
     for (let x = 0; x < width; x += width / 8) {
-      for (let y = 0; y < height; y += height / 8) {
+      for (let y = 0; y < height - 30; y += height / 8) {
         const px = x + (Math.random() * width) / 8;
-        const py = y + (Math.random() * height) / 8;
+        const py = y + (Math.random() * (height - 30)) / 8; // Ensure points are not within 30px of the bottom
         const p = { x: px, y: py, originX: px, originY: py };
         points.push(p);
         qtree.insert(p);
@@ -120,7 +120,7 @@ export const BackgroundAnimation = () => {
       const xMovement = p.originX - 50 + Math.random() * 100;
       const yMovement = p.originY - 50 + Math.random() * 100;
       const newX = Math.max(0, Math.min(xMovement, width));
-      const newY = Math.max(0, Math.min(yMovement, height));
+      const newY = Math.max(0, Math.min(yMovement, height - 30)); // Ensure yMovement is at least 30px from the bottom
 
       gsap.to(p, {
         duration: 1 + 1 * Math.random(),

@@ -4,7 +4,7 @@ import { useTheme } from "../Theme/useTheme";
 import PropTypes from 'prop-types';
 import "./WindowPanel.css";
 
-export const WindowPanel = ({ children, class_number, text }) => {
+const WindowPanelComponent = ({ children, class_number, text}) => {
   const MemoizedWindowTab = memo(WindowTab);
   const { theme } = useTheme();
   return (
@@ -13,14 +13,16 @@ export const WindowPanel = ({ children, class_number, text }) => {
         theme === "green" ? "window-panel-green" : "window-panel-orange"
       } window-panel window-panel-${class_number}`}
     >
-      <MemoizedWindowTab text={text} />
+      <MemoizedWindowTab text={text}/>
       <div>{children}</div>
     </div>
   );
 };
 
-WindowPanel.propTypes = {
+WindowPanelComponent.propTypes = {
   children: PropTypes.node.isRequired, // Validate that children is a valid React node
-  class_number: String,
-  text: String,
+  class_number: PropTypes.string, // Ensure class_number is a string
+  text: PropTypes.string // Ensure text is a string
 };
+
+export const WindowPanel = memo(WindowPanelComponent);

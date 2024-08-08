@@ -20,7 +20,6 @@ export const Logo = () => {
         id="visual"
       >
         <path
-          //   fill="#ffffff"
           fill={getFillColor("#ffffff", "#000000")}
           d="M 7.62294,41.87141 V 13.48744 L 19.11038,2 h 30.14496 v 8.86621 h -10.3682 z"
           id="path1091"
@@ -46,7 +45,7 @@ export const Logo = () => {
           id="path1091-6"
         />
         <path
-          fill={getFillColor("#ffffff", "#000000")}
+          fill={getFillColor("#00ff77", "#f85c2c")}
           d="m 145.28126,79.53538 -4.61675,-7.30814 V 44.36292 l -8.47319,-8.47319 H 121.4368 v -8.81744 h 30.49376 l 11.65411,11.6541 v 31.05139 l 5.82566,5.82566 -28.64861,28.64861 V 86.95532 Z"
           id="path1099-2"
         />
