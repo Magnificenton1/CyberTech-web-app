@@ -1,19 +1,17 @@
 import { WindowTab } from "./WindowTab";
-import { memo } from "react";
-import { useTheme } from "../Theme/useTheme";
+import { memo, useState } from "react";
 import PropTypes from 'prop-types';
 import "./WindowPanel.css";
 
 const WindowPanelComponent = ({ children, class_number, text}) => {
   const MemoizedWindowTab = memo(WindowTab);
-  const { theme } = useTheme();
+  const [isClosed, setIsClosed] = useState(false);
+
   return (
     <div
-      className={`${
-        theme === "green" ? "window-panel-green" : "window-panel-orange"
-      } window-panel window-panel-${class_number}`}
+      className={`window-panel window-panel-${class_number} ${isClosed ? "window-panel-closed" : ""}`}
     >
-      <MemoizedWindowTab text={text}/>
+      <MemoizedWindowTab text={text} setIsClosed={setIsClosed}/>
       <div>{children}</div>
     </div>
   );

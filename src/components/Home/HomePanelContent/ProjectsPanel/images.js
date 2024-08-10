@@ -11,12 +11,6 @@ const images = [
       imgAlt: "img-2",
       caption: "Projekt 2"
     },
-    {
-      imgURL:
-        "https://placehold.co/600x400",
-      imgAlt: "img-3",
-      caption: "Projekt 3"
-    },
   ];
   
   export default images;

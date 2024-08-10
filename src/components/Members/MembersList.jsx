@@ -13,6 +13,9 @@ export const MembersList = () => {
             firstName={member.firstname}
             lastName={member.lastName}
             role={member.role}
+            desc={member.describtion}
+            projects={member.projects}
+            image={member.image}
           />
         );
       })}

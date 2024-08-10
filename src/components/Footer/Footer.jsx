@@ -1,13 +1,11 @@
-import { useTheme } from "../Theme/useTheme";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaGithubSquare } from "react-icons/fa";
 import "./Footer.css";
 
 export const Footer = () => {
-  const { theme } = useTheme();
   return (
-    <div className={`footer footer-container-${theme}`}>
+    <div className={`footer`}>
       <div className="science-club-div"></div>
       <div className="creator-div">
         <div>Strona została wykonana przez: Konrad Florczak</div>

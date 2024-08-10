@@ -98,13 +98,13 @@ export const BackgroundAnimation = () => {
           const distance = getDistance(target, p);
           if (distance < 40000) {
             p.active = 0.6;
-            p.circle.active = 0.9;
+            p.circle.active = 0.6;
           } else if (distance < 80000) {
             p.active = 0.4;
-            p.circle.active = 0.6;
+            p.circle.active = 0.4;
           } else if (distance < 120000) {
             p.active = 0.3;
-            p.circle.active = 0.4;
+            p.circle.active = 0.3;
           } else {
             p.active = 0.2;
             p.circle.active = 0.2;

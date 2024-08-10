@@ -9,17 +9,11 @@
     justify-content: space-between;
 
     font-size: 16px;
+
+    color: gray;
+    background-color: #ffffff;
 }
 
-.footer-container-green{
-    color: gray;
-    background-color: #100c0c;
-}
-
-.footer-container-orange{
-    color: gray;
-    background-color: #f3f3f3;
-}
 
 .science-club-div{
     width: 60%;

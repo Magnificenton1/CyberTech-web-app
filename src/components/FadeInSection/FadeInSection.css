@@ -30,4 +30,5 @@
     opacity: 1;
     transform: translateX(0);
     filter: blur(0);
-  }
+  } 
+  /* NWM CZEMU ALE nth-child(2) JEST ZEPSUTY JEŚLI ROBISZ REFRESHA ALE TYLKO NA SAMYM DNIE STRONY XD */

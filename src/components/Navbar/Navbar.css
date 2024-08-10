@@ -1,7 +1,3 @@
-@font-face {
-  font-family: navbarFont;
-  src: url(./../../../assets/Metropolis-Medium.ttf);
-}
 
 nav {
   position: sticky;
@@ -12,7 +8,7 @@ nav {
   height: 66px;
   width: 100%;
   background-color: black;
-  z-index: 200;
+  z-index: 1000;
 }
 .scroll-watcher{
   z-index: -1;
@@ -94,7 +90,7 @@ nav ul li a {
 }
 
 nav .ul-green li a:hover{
-  color: rgba(0, 255, 119, 1);
+  color: #00ff77;
 }
 nav .ul-orange li a:hover{
   color: #f85c2c;

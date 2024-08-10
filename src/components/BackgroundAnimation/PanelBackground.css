@@ -1,7 +1,0 @@
-.large-header2{
-    position: absolute; /* Positioned relative to the parent-component */
-  top: 0;
-  left: 0;
-  z-index: 1;
-  background: none;
-}

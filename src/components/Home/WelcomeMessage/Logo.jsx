@@ -20,12 +20,12 @@ export const Logo = () => {
         id="visual"
       >
         <path
-          fill={getFillColor("#ffffff", "#000000")}
+          fill="#ffffff"
           d="M 7.62294,41.87141 V 13.48744 L 19.11038,2 h 30.14496 v 8.86621 h -10.3682 z"
           id="path1091"
         />
         <path
-          fill={getFillColor("#ffffff", "#000000")}
+          fill="#ffffff"
           d="m 64.62505,107.02555 0.0625,3.4e-4 h 8.35916 L 123.21848,2.06477 h -8.2515 z"
           id="path1093"
         />
@@ -40,7 +40,7 @@ export const Logo = () => {
           id="path1101"
         />
         <path
-          fill={getFillColor("#ffffff", "#000000")}
+          fill="#ffffff"
           d="m 163.35269,92.22415 v 28.38397 l -11.48744,11.48744 h -30.14496 v -8.86621 h 10.3682 z"
           id="path1091-6"
         />

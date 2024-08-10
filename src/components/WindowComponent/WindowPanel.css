@@ -9,8 +9,30 @@
     box-sizing: border-box;
     overflow-wrap: break-word;
     white-space: pre-wrap;
+
+    transition: opacity 1s ease-out, transform 1s ease;
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
     
   }
+
+  @media(prefers-reduced-motion){
+    .window-panel{
+      transition: none
+    }
+  }
+
+  .window-panel-closed{
+    opacity: 0;
+    transform: translateX(-100%);
+    filter: blur(5px);
+  }
+  .window-panel-closed:nth-child(even) {
+    opacity: 0;
+    transform: translateX(100%);
+    filter: blur(5px);
+}
 
 
   .window-panel-1 {
@@ -18,7 +40,7 @@
     min-width: 350px;
     max-width: 1300px;
     /* height: auto; */
-    min-height: 540px;
+    min-height: 580px;
   }
   
   .window-panel-2 {
@@ -34,4 +56,11 @@
     width: 35%;
     min-width: 350px;
     max-width: 700px;
+  }
+  .window-panel-4 {
+    /* height: auto; */
+    width: 30%;
+    min-width: 350px;
+    max-width: 1020px;
+    margin-bottom: 20px;
   }

@@ -10,16 +10,17 @@ import { TypingEffect } from "./TypingEffect";
 export const HomeParallaxComponent = () => {
   const { theme } = useTheme();
   const [textEnd, setTextEnd] = useState(false);
+  const renderTheme = theme;
   const text_output = `
-C:\\cybertech> Chcesz zacząć swoją przygodę ze <span style="color: rgba(0, 255, 119, 1);">sztuczną inteligencją</span>? A może szukasz ciekawych projektów w gronie pasjonatów?
+C:\\cybertech> Chcesz zacząć swoją przygodę ze <span style="color: ${renderTheme === "green" ? "rgba(0, 255, 119, 1)" : "#f85c2c"};">sztuczną inteligencją</span>? A może szukasz ciekawych projektów w gronie pasjonatów?
 
-C:\\cybertech> <span style="color: #f85c2c;">Świetnie trafiłeś!</span>
+C:\\cybertech> <span style="color: ${renderTheme === "green" ? "rgba(0, 255, 119, 1)" : "#f85c2c"};">Świetnie trafiłeś!</span>
 
 C:\\cybertech> Już od dziesięciu lat wspieramy naszych członków w zgłębianiu świata AI, oferując możliwość zdobycia cennego doświadczenia.
 
-C:\\cybertech> Specjalizujemy się w <span style="color: rgba(0, 255, 119, 1);">przetwarzaniu obrazów</span> i <span style="color: #f85c2c;">uczeniu maszynowym</span> korzystając głównie z narzędzi takich jak <span style="color: rgba(0, 255, 119, 1);">TensorFlow i Keras</span>.
+C:\\cybertech> Specjalizujemy się w <span style="color: ${renderTheme === "green" ? "rgba(0, 255, 119, 1)" : "#f85c2c"};">przetwarzaniu obrazów</span> i <span style="color: ${renderTheme === "green" ? "rgba(0, 255, 119, 1)" : "#f85c2c"};">uczeniu maszynowym</span> korzystając głównie z narzędzi takich jak <span style="color: ${renderTheme === "green" ? "rgba(0, 255, 119, 1)" : "#f85c2c"};">TensorFlow i Keras</span>.
 
-C:\\cybertech> <span style="color: #f85c2c;">Oferujemy wykłady wprowadzające, live coding i projekty, które pozwalają stopniowo poszerzać swoją wiedzę i umiejętności.</span>
+C:\\cybertech> <span style="color: ${renderTheme === "green" ? "rgba(0, 255, 119, 1)" : "#f85c2c"};">Oferujemy wykłady wprowadzające, live coding i projekty, które pozwalają stopniowo poszerzać swoją wiedzę i umiejętności.</span>
 
 C:\\cybertech> Jesteśmy otwarci na wszystkich – potrzebujesz jedynie motywacji i podstawowych umiejętności programowania. Masz inne talenty albo interesujesz się innymi dziedzinami informatyki? Również zapraszamy! W naszych interdyscyplinarnych projektach każdy znajdzie coś dla siebie.
 C:\\cybertech> `;
@@ -32,13 +33,13 @@ C:\\cybertech> `;
     >
       <FadeInSection>
         <div className="panel1-container">
-          <WindowPanel text={"Informacje o nas"} class_number={"1"}>
+          <WindowPanel text={"Informacje o kole"} class_number={"1"}>
             <p>
               <TypingEffect
                 text={text_output}
                 onTypingEnd={() => setTextEnd(true)}
               />
-              <span className={`blinking-cursor ${textEnd ? "blinking-cursor-animation" : ""}`}>|</span>
+              <span className={`blinking-cursor ${textEnd ? "blinking-cursor-animation" : "blinking-cursor-disabled"}`}>_</span>
             </p>
           </WindowPanel>
         </div>
@@ -47,7 +48,7 @@ C:\\cybertech> `;
         <div
           className="panel2-container"
         >
-          <WindowPanel text={"Nasze projekty!"} class_number={"2"}>
+          <WindowPanel text={"Nasze projekty"} class_number={"2"}>
             <ProjectsPanel />
           </WindowPanel>
         </div>
@@ -56,7 +57,7 @@ C:\\cybertech> `;
         <div
           className="panel3-container"
         >
-          <WindowPanel text={"Dołącz do nas!"} class_number={"3"}>
+          <WindowPanel text={"Dołącz do nas"} class_number={"3"}>
             <JoinButton />
           </WindowPanel>
         </div>

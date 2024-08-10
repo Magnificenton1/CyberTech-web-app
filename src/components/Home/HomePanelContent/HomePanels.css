@@ -15,6 +15,8 @@ rect {
   flex-direction: column;
   justify-content: center;
 
+  overflow: hidden;
+
   width: 100%;
   height: auto;
 
@@ -73,6 +75,9 @@ p span{
   -ms-animation: 1.5s blink step-end infinite;
   -o-animation: 1.5s blink step-end infinite;
   animation: 1.5s blink step-end infinite;
+}
+.blinking-cursor-disabled{
+  display: none;
 }
 
 @keyframes blink {

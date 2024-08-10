@@ -16,7 +16,7 @@
     display: flex;
     flex-direction: row;
     height: 100% - 10px;
-    width: 50%;
+    width: 100%;
 }
 .tab-section-2{
     display: flex;
@@ -30,7 +30,6 @@
     display: flex;
     align-items: center;
     height: 100%;
-    width: 60%;
     min-width: 120px;
     max-width: 200px;
     padding-left: 12.5px;
@@ -61,11 +60,24 @@
     text-align: center;
     align-items: center;
     justify-content: center;
-
-    font-size: 24px;
-    color: white;
     background-color: 
     #100c0c;
+}
+.close-circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+
+    width: 35px;
+    height: 25px;
+
+    position: relative;
+    border-radius: 0.25rem;  
+}
+.close-circle:hover{
+    background-color: #2E2E2E;
 }
 .new-tab{
     display: flex;
@@ -133,8 +145,4 @@
 .minimalize-tab:hover{
     background-color: #4b4646;
 }
-@media (max-width: 500px) {
-    .command-icon{
-        display: none;
-    }
-  }
+
