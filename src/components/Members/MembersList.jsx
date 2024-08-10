@@ -16,6 +16,7 @@ export const MembersList = () => {
             desc={member.describtion}
             projects={member.projects}
             image={member.image}
+            golden={member.golden}
           />
         );
       })}

@@ -1,34 +1,24 @@
 {
     "members":[
         {
-            "firstname": "Jacek",
-            "lastName": "Jeczeń",
-            "role": "Przewodniczący",
-            "describtion": "Pracowity i zawzięty informatyk, starający się tworzyć wielkie rzeczy.",
-            "projects": ["project1", "project2"],
-            "image": "https://placehold.co/600x400/png",
-            "number": 0,
-            "COMMENT_DO_NOT_USE": "WYMIARY ZDJĘĆ TO 600X400!!!!!!!!, teoretycznie cokolwiek w skali 3x2 pasuje, lepsza jakość wręcz zalecana, wymiary mniejsze od 350x253 NIEZALECANE"
-        },
-        {
-            "firstname": "Jacek",
-            "lastName": "Jeczeń",
-            "role": "Przewodniczący",
-            "describtion": "Pracowity i zawzięty informatyk, starający się tworzyć wielkie rzeczy.",
-            "projects": ["project1", "project2"],
-            "image": "placeholder600x400",
-            "number": 0,
-            "COMMENT_DO_NOT_USE": "WYMIARY ZDJĘĆ TO 600X400!!!!!!!!, teoretycznie cokolwiek w skali 3x2 pasuje, lepsza jakość wręcz zalecana, wymiary mniejsze od 350x253 NIEZALECANE"
-        },
-        {
-            "firstname": "Jacek",
-            "lastName": "Jeczeń",
-            "role": "Przewodniczący",
-            "describtion": "Pracowity i zawzięty informatyk, starający się tworzyć wielkie rzeczy.",
+            "firstname": "Tomasz",
+            "lastName": "Janiczek",
+            "role": "Opiekun koła",
+            "describtion": "",
             "projects": [""],
-            "image": "https://placehold.co/600x400",
-            "number": 0,
-            "COMMENT_DO_NOT_USE": "WYMIARY ZDJĘĆ TO 600X400!!!!!!!!, teoretycznie cokolwiek w skali 3x2 pasuje, lepsza jakość wręcz zalecana, wymiary mniejsze od 350x253 NIEZALECANE"
+            "image": "https://placehold.co/600x400/png",
+            "COMMENT_DO_NOT_USE": "WYMIARY ZDJĘĆ TO 600X400!!!!!!!!, teoretycznie cokolwiek w skali 3x2 pasuje, lepsza jakość wręcz zalecana, wymiary mniejsze od 350x253 NIEZALECANE",
+            "golden": 1 
+        },
+        {
+            "firstname": "Marek",
+            "lastName": "Bazan",
+            "role": "Opiekun koła",
+            "describtion": "",
+            "projects": [""],
+            "image": "placeholder600x400",
+            "COMMENT_DO_NOT_USE": "WYMIARY ZDJĘĆ TO 600X400!!!!!!!!, teoretycznie cokolwiek w skali 3x2 pasuje, lepsza jakość wręcz zalecana, wymiary mniejsze od 350x253 NIEZALECANE",
+            "golden": 1
         },
         {
             "firstname": "Jacek",
@@ -37,8 +27,18 @@
             "describtion": "Pracowity i zawzięty informatyk, starający się tworzyć wielkie rzeczy.",
             "projects": ["project1", "project2"],
             "image": "https://placehold.co/600x400",
-            "number": 0,
-            "COMMENT_DO_NOT_USE": "WYMIARY ZDJĘĆ TO 600X400!!!!!!!!, teoretycznie cokolwiek w skali 3x2 pasuje, lepsza jakość wręcz zalecana, wymiary mniejsze od 350x253 NIEZALECANE"
+            "COMMENT_DO_NOT_USE": "WYMIARY ZDJĘĆ TO 600X400!!!!!!!!, teoretycznie cokolwiek w skali 3x2 pasuje, lepsza jakość wręcz zalecana, wymiary mniejsze od 350x253 NIEZALECANE",
+            "golden": 1
+        },
+        {
+            "firstname": "Marek",
+            "lastName": "Nowak",
+            "role": "Członek",
+            "describtion": "",
+            "projects": ["project1", "project2"],
+            "image": "https://placehold.co/600x400",
+            "COMMENT_DO_NOT_USE": "WYMIARY ZDJĘĆ TO 600X400!!!!!!!!, teoretycznie cokolwiek w skali 3x2 pasuje, lepsza jakość wręcz zalecana, wymiary mniejsze od 350x253 NIEZALECANE",
+            "golden": 0
         }
 ]
 }

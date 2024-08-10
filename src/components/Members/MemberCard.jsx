@@ -1,6 +1,6 @@
 import { useTheme } from "../Theme/useTheme";
 import { WindowPanel } from "../WindowComponent/WindowPanel";
-// import placeholder600x400 from "./../../assets/placeholder600x400.jpg"
+import placeholder600x400 from "./../../assets/placeholder600x400.png"
 import "./Members.css";
 import PropTypes from "prop-types";
 export const MemberCard = ({
@@ -10,10 +10,17 @@ export const MemberCard = ({
   desc,
   image,
   projects,
+  golden,
 }) => {
   const { theme } = useTheme();
+  let CardColor;
+  if(golden){
+    CardColor = "golden";
+  }else{
+    CardColor = theme;
+  }
   return (
-    <WindowPanel text={role} class_number={4}>
+    <WindowPanel text={role} class_number={golden ? 5 : 4}>
       <div className="member-card">
         <div className="member-desc">
           <div
@@ -26,14 +33,17 @@ export const MemberCard = ({
               flexDirection: "column",
             }}
           >
-            <div className={`member-name member-name-${theme}`}>
+            <div className={`member-name member-name-${CardColor}`}>
               {firstName} {lastName}
             </div>
-            <div>{desc}</div>
+            {desc.length === 0 ||
+            (desc.length > 0 && desc === "") ? null : (
+              <div>{desc}</div>
+            )}
             {projects.length === 0 ||
             (projects.length === 1 && projects[0] === "") ? null : (
               <div style={{ color: "white" }}>
-                <div className={`member-name-${theme}`}>Projekty: </div>
+                <div className={`member-name-${CardColor}`}>Projekty: </div>
                 {projects.map((project, index) => (
                   <span key={index}>{project} </span>
                 ))}
@@ -41,7 +51,7 @@ export const MemberCard = ({
             )}
           </div>
         </div>
-        <img className="member-img" src={image} />
+        <img className="member-img" src={placeholder600x400} />
       </div>
     </WindowPanel>
   );
@@ -51,4 +61,8 @@ MemberCard.propTypes = {
   firstName: PropTypes.string.isRequired,
   lastName: PropTypes.string.isRequired,
   role: PropTypes.string.isRequired,
+  desc: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  projects: PropTypes.string.isRequired,
+  golden: PropTypes.bool.isRequired,
 };

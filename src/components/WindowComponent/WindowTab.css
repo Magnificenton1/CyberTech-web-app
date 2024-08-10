@@ -11,6 +11,9 @@
     flex-direction: row;
     justify-content: space-between;
 }
+.window-tab-gold{
+    background-color: rgb(236, 211, 64);
+}
 .tab-section-1{
     margin-top: 8px;
     display: flex;
@@ -47,6 +50,9 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+.text-tab-gold{
+    color: gold;
 }
 .command-icon{
     font-size: 20px;

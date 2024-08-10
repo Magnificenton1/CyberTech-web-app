@@ -7,7 +7,7 @@ import { useVisibility } from "../FadeInSection/FadeInSection";
 // import { VscChromeMinimize } from "react-icons/vsc";
 // import { VscChromeMaximize } from "react-icons/vsc";
 
-export const WindowTab = ({ text, setIsClosed }) => {
+export const WindowTab = ({ text, setIsClosed, class_number }) => {
   const setIsVisible = useVisibility();
   const handleVisibility = () => {
     if (setIsVisible) {
@@ -22,11 +22,12 @@ export const WindowTab = ({ text, setIsClosed }) => {
       //fallbackFunction();
     }
   };
-  return (
+  return (// there is only a value for window-tab-5 and text-tab-5 in CSS, the rest is default
+          // i wanted some Panels to have different look without creating dependencies, so I came up with simple number values
     <>
-      <div className="window-tab">
+    <div className={`window-tab ${class_number === 5 ? "window-tab-gold" : ""}`}>
         <div className="tab-section-1">
-          <div className="text-tab"><FcCommandLine className="command-icon"/>{text}</div>
+          <div className={`text-tab ${class_number === 5 ? "text-tab-gold" : ""}`}><FcCommandLine className="command-icon"/>{text}</div>
           <div className="close-tab">
             <div className="close-circle">
             <IoIosClose onClick={handleVisibility} style={{position: "absolute"}}/>

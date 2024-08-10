@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTheme } from "../../components/Theme/useTheme";
 import ReactSwitch from "react-switch";
 import { LogoTextNavbar } from "./LogoTextNavbar";
@@ -8,9 +8,18 @@ import { LogoNavlink2 } from "./LogoNavlink2";
 import { LogoNavlink1 } from "./LogoNavlink1";
 
 export const Navbar = () => {
-  const [selectedNavLink, setSelectedNavLink] = useState("home");
+  const [selectedNavLink, setSelectedNavLink] = useState(() => {
+      return localStorage.getItem("selectedNav") || "home";
+    });
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
+
+  // const [theme, setTheme] = useState(() => {
+  //   return localStorage.getItem('theme') || 'orange';
+  // });
+  useEffect(() => {
+    localStorage.setItem("selectedNav", selectedNavLink);
+  }, [selectedNavLink]);
 
   const handleMenuOpen = () => {
     if (isMenuOpen === false) {
@@ -28,7 +37,7 @@ export const Navbar = () => {
   return (
     <nav>
       <div className={`scroll-watcher-${theme} scroll-watcher`}></div>
-      <NavLink className="cybertech-title" to="/">
+      <NavLink className="cybertech-title" to="/" onClick={() => handleSelected("home")}>
         <LogoTextNavbar />
       </NavLink>
       <div className="switch">

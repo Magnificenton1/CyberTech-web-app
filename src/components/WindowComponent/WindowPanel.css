@@ -62,5 +62,17 @@
     width: 30%;
     min-width: 350px;
     max-width: 1020px;
-    margin-bottom: 20px;
+    margin: 2.5%;
+
+    box-shadow: 0px 0px 16px 10px rgba(0, 0, 0, 0.6);
+  }
+
+  .window-panel-5 {
+    /* height: auto; */
+    width: 30%;
+    min-width: 350px;
+    max-width: 1020px;
+    margin: 2.5%;
+
+    box-shadow: 0px 0px 16px 10px rgba(0, 0, 0, 0.6);
   }
