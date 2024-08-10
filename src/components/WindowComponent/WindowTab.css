@@ -10,9 +10,13 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
 }
-.window-tab-gold{
-    background-color: rgb(236, 211, 64);
+.window-tab-green{
+    background-color: #00ff77;
+}
+.window-tab-orange{
+    background-color: #f85c2c;
 }
 .tab-section-1{
     margin-top: 8px;
@@ -50,9 +54,14 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+
+    transition: color 0.5s ease;
 }
-.text-tab-gold{
-    color: gold;
+.text-tab-green{
+    color: #00ff77;
+}
+.text-tab-orange{
+    color: #f85c2c;
 }
 .command-icon{
     font-size: 20px;

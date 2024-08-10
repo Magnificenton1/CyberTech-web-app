@@ -7,13 +7,15 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  background-color: rgb(16,12,12);
 }
 .members-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-  border: solid red 1px;
 }
 
 .member-desc{
@@ -25,6 +27,8 @@
   display: flex;
   align-items:center;
   box-shadow: 15px 0px 20px rgba(0, 0, 0, 1);
+
+  border-bottom-left-radius: 0.5rem;
 
 
 
@@ -44,6 +48,7 @@
   display: block;
   border-bottom-right-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
+
 }
 .member-name{
   /* font-size: clamp(1.1rem, 1vw + 0.2rem, 1.5rem); */
@@ -56,10 +61,6 @@
 }
 .member-name-orange{
   color: #f85c2c;
-  transition: color 0.5s ease;
-}
-.member-name-golden{
-  color: gold;
   transition: color 0.5s ease;
 }
 

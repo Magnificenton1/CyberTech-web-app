@@ -3,12 +3,14 @@ import PropTypes from "prop-types";
 import { IoIosClose } from "react-icons/io";
 import { FcCommandLine } from "react-icons/fc";
 import { useVisibility } from "../FadeInSection/FadeInSection";
+import { useTheme } from "../Theme/useTheme";
 // import { GoPlus } from "react-icons/go";
 // import { VscChromeMinimize } from "react-icons/vsc";
 // import { VscChromeMaximize } from "react-icons/vsc";
 
 export const WindowTab = ({ text, setIsClosed, class_number }) => {
   const setIsVisible = useVisibility();
+  const { theme} = useTheme();
   const handleVisibility = () => {
     if (setIsVisible) {
       // It firstly checks for context (fade in section (useVisibility) - which is in homePage, but I do not want to use it here)
@@ -17,7 +19,7 @@ export const WindowTab = ({ text, setIsClosed, class_number }) => {
       // If context is not available, fall back to setIsClosed, which is default close animation for windowPanel
       // I could use only it but then there the nth child fade out wouldn't work
       // TO DO: check if it's really impossible to do with only setIsClosed
-      console.warn('No provider available, executing fallback function');
+      console.warn('No provider available, executing fallback function - delete later in WindowTab');
       setIsClosed(true);
       //fallbackFunction();
     }
@@ -25,9 +27,9 @@ export const WindowTab = ({ text, setIsClosed, class_number }) => {
   return (// there is only a value for window-tab-5 and text-tab-5 in CSS, the rest is default
           // i wanted some Panels to have different look without creating dependencies, so I came up with simple number values
     <>
-    <div className={`window-tab ${class_number === 5 ? "window-tab-gold" : ""}`}>
+    <div className={`window-tab ${class_number === 5 ? `window-tab-${theme}` : ""}`}>
         <div className="tab-section-1">
-          <div className={`text-tab ${class_number === 5 ? "text-tab-gold" : ""}`}><FcCommandLine className="command-icon"/>{text}</div>
+          <div className={`text-tab ${class_number === 5 ? `text-tab-${theme}` : ""}`}><FcCommandLine className="command-icon"/>{text}</div>
           <div className="close-tab">
             <div className="close-circle">
             <IoIosClose onClick={handleVisibility} style={{position: "absolute"}}/>
@@ -51,4 +53,6 @@ export const WindowTab = ({ text, setIsClosed, class_number }) => {
 
 WindowTab.propTypes = {
   text: PropTypes.string.isRequired,
+  setIsClosed: PropTypes.bool.isRequired,
+  class_number: PropTypes.number.isRequired
 };

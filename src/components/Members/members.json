@@ -8,7 +8,7 @@
             "projects": [""],
             "image": "https://placehold.co/600x400/png",
             "COMMENT_DO_NOT_USE": "WYMIARY ZDJĘĆ TO 600X400!!!!!!!!, teoretycznie cokolwiek w skali 3x2 pasuje, lepsza jakość wręcz zalecana, wymiary mniejsze od 350x253 NIEZALECANE",
-            "golden": 1 
+            "color": 1 
         },
         {
             "firstname": "Marek",
@@ -18,7 +18,7 @@
             "projects": [""],
             "image": "placeholder600x400",
             "COMMENT_DO_NOT_USE": "WYMIARY ZDJĘĆ TO 600X400!!!!!!!!, teoretycznie cokolwiek w skali 3x2 pasuje, lepsza jakość wręcz zalecana, wymiary mniejsze od 350x253 NIEZALECANE",
-            "golden": 1
+            "color": 1 
         },
         {
             "firstname": "Jacek",
@@ -28,7 +28,7 @@
             "projects": ["project1", "project2"],
             "image": "https://placehold.co/600x400",
             "COMMENT_DO_NOT_USE": "WYMIARY ZDJĘĆ TO 600X400!!!!!!!!, teoretycznie cokolwiek w skali 3x2 pasuje, lepsza jakość wręcz zalecana, wymiary mniejsze od 350x253 NIEZALECANE",
-            "golden": 1
+            "color": 1 
         },
         {
             "firstname": "Marek",

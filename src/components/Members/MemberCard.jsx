@@ -10,17 +10,12 @@ export const MemberCard = ({
   desc,
   image,
   projects,
-  golden,
+  color
 }) => {
   const { theme } = useTheme();
-  let CardColor;
-  if(golden){
-    CardColor = "golden";
-  }else{
-    CardColor = theme;
-  }
-  return (
-    <WindowPanel text={role} class_number={golden ? 5 : 4}>
+  return (// color is a bool in json that tells if the panel needs to be highlighted, highlighted panel has class_number 5
+          // default members panel has number 4
+    <WindowPanel text={role} class_number={color ? 5 : 4}>
       <div className="member-card">
         <div className="member-desc">
           <div
@@ -33,7 +28,7 @@ export const MemberCard = ({
               flexDirection: "column",
             }}
           >
-            <div className={`member-name member-name-${CardColor}`}>
+            <div className={`member-name member-name-${theme}`}>
               {firstName} {lastName}
             </div>
             {desc.length === 0 ||
@@ -43,7 +38,7 @@ export const MemberCard = ({
             {projects.length === 0 ||
             (projects.length === 1 && projects[0] === "") ? null : (
               <div style={{ color: "white" }}>
-                <div className={`member-name-${CardColor}`}>Projekty: </div>
+                <div className={`member-name-${theme}`}>Projekty: </div>
                 {projects.map((project, index) => (
                   <span key={index}>{project} </span>
                 ))}
@@ -64,5 +59,5 @@ MemberCard.propTypes = {
   desc: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   projects: PropTypes.string.isRequired,
-  golden: PropTypes.bool.isRequired,
+  color: PropTypes.bool.isRequired,
 };
