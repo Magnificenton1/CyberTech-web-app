@@ -39,30 +39,29 @@
     width: 55%;
     min-width: 350px;
     max-width: 1300px;
-    /* height: auto; */
-    min-height: 580px;
+    min-height: 610px;
   }
   
   .window-panel-2 {
-    /* height: auto; */
     width: 55%;
     min-width: 350px;
     max-width: 1000px;
+    background-color: #2E2E2E;
+
+    /* it for border radius to not be cut by images  */
+    overflow: hidden;
   }
   
   .window-panel-3 {
-    min-height: 300px;
-    /* height: auto; */
     width: 35%;
     min-width: 350px;
     max-width: 700px;
   }
   .window-panel-4 {
-    /* height: auto; */
     width: 30%;
     min-width: 350px;
-    max-width: 1020px;
-    margin: 2.5%;
+    max-width: 650px;
+    margin: 5.5%;
 
     box-shadow: 0px 0px 16px 10px rgba(0, 0, 0, 0.6);
   }
@@ -71,8 +70,9 @@
     /* height: auto; */
     width: 30%;
     min-width: 350px;
-    max-width: 1020px;
-    margin: 2.5%;
+    max-width: 650px;
+    margin: 5.5%;
+    
 
     box-shadow: 0px 0px 16px 10px rgba(0, 0, 0, 0.6);
   }

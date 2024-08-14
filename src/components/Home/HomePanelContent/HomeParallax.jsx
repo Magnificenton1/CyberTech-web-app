@@ -1,11 +1,11 @@
 import "./HomePanels.css";
 import { useState, memo} from "react";
-import { ProjectsPanel } from "./ProjectsPanel/ProjectsPanel";
 import { FadeInSection } from "../../FadeInSection/FadeInSection";
 import { useTheme } from "../../Theme/useTheme";
 import { JoinButton } from "./JoinButton/JoinButton";
 import { WindowPanel } from "../../WindowComponent/WindowPanel";
 import { TypingEffect } from "./TypingEffect";
+import { Slider } from "./ProjectsPanel/Slider";
 
 export const HomeParallaxComponent = () => {
   const { theme } = useTheme();
@@ -49,7 +49,8 @@ C:\\cybertech> `;
           className="panel2-container"
         >
           <WindowPanel text={"Nasze projekty"} class_number={"2"}>
-            <ProjectsPanel />
+            {/* <ProjectsPanel /> */}
+            <Slider/>
           </WindowPanel>
         </div>
       </FadeInSection>

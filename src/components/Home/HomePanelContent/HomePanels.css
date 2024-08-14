@@ -42,7 +42,6 @@ rect {
   flex-direction: row;
   width: 100%;
   height: auto;
-  /* border: solid blue 10px; */
   margin-bottom: 80px;
 }
 .panel2-container {
@@ -52,7 +51,6 @@ rect {
   align-items: flex-end;
   width: 100%;
   height: auto;
-  /* border: solid blue 10px; */
   margin-bottom: 80px;
 }
 p {
@@ -93,13 +91,15 @@ p span{
   .home-container {
     align-items: center;
     min-height: 1500px;
-    max-height: 1600px;
+    max-height: 1800px;
   }
   .panel2-container,
   .panel1-container,
   .panel3-container {
+    position: relative;
     justify-content: center;
     align-items: center;
+    width: 350px;
   }
 }
 

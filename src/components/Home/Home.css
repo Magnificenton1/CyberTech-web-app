@@ -1,9 +1,9 @@
 
 .home{
     position: absolute;
-    height: 120%;
+    height: 300%;
     width: 100%;
     transition: background-color 0.5s ease;
     z-index: -100;
-    background-color: #100c0c
+    background-color: #100c0c;
 }

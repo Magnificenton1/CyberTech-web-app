@@ -7,7 +7,7 @@ import "./Home.css";
 export const HomeComponent = () => {
   return (
     <div>
-      <div className={`home`}/>
+      <div className="home"/>
       <BackgroundAnimation />
       <WelcomeMessage />
       <HomeParallax />
