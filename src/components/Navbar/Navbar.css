@@ -45,6 +45,10 @@ nav {
     scale: 1 1;
   }
 }
+.svg-container{
+  height: 100%;
+  min-width: 54px;
+}
 .cybertech-title {
   /* color: white; */
   /* margin-left: 5%; */
@@ -55,7 +59,7 @@ nav {
   color: rgb(0, 0, 0);
   background-color: #ffffff;
   height: 100%;
-  width: 480px;
+  width: 300px;
   min-width: 200px;
   mix-blend-mode: screen;
   /* border: solid red 1px; */
@@ -63,8 +67,6 @@ nav {
 nav ul {
   display: flex;
   flex-direction: row;
-  /* background-color: #e0e0e0; */
-  /* border: 1px solid black; */
 }
 nav ul li {
   list-style: none;
@@ -78,7 +80,7 @@ nav ul li a {
   text-decoration: none;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   text-align: center;
-  width: clamp(120px, 15vw, 240px);
+  width: clamp(100px, 15vw, 240px);
   height: 66px;
   
   
@@ -102,6 +104,7 @@ nav .ul-orange li a:hover{
 }
 .navbar-chosen {
   color: rgb(0, 0, 0);
+  z-index: 200;
 }
 .nav-icon {
   display: flex;
@@ -131,7 +134,7 @@ nav .ul-orange li a:hover{
 .bar:first-child {
   margin-top: 18px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1027px) {
   nav ul {
     position: fixed;
     left: -100%;

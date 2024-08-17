@@ -1,4 +1,5 @@
 import { useTheme } from "../../components/Theme/useTheme";
+import "./Navbar.css";
 
 export const LogoNavlink1 = () => {
   const { theme } = useTheme();

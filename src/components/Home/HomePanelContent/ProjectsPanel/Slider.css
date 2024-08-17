@@ -16,6 +16,7 @@
 are not the same size, adjust to make it work! */
 .text-slider{
     position: absolute;
+    max-width: 200px;
     top: 25%;
     left: 50%;
     background-color: #100c0c;
@@ -40,6 +41,8 @@ are not the same size, adjust to make it work! */
   margin-bottom: 10px;
   margin-top: -15px;
   background-color: #100c0c;
+
+  transition: all 0.3s ease;
 }
 .slide-indicator:first-child{
     border-top-left-radius: 0.5rem;
