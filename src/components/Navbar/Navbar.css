@@ -138,28 +138,35 @@ nav .ul-orange li a:hover{
   nav ul {
     position: fixed;
     left: -100%;
-    top: 5rem;
+    top: 66px;
+    gap: 0;
     flex-direction: column;
-    background-color: #fff;
     width: 100%;
-    border-radius: 10px;
     text-align: center;
     transition: 0.3s;
-    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-  }
+    background-color: #fff;
 
-  nav ul .active {
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+  }
+  nav ul.active {
     left: 0;
   }
 
   nav ul li {
-    margin: 2.5rem 0;
+    margin: 16px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  nav ul li a{
+    color: black;
+    mix-blend-mode: normal;
   }
 
   .hamburger {
     display: block;
     cursor: pointer;
-    border: solid red 1px;
   }
   .bar {
     display: block;

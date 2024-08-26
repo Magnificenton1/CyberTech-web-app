@@ -22,7 +22,7 @@ export const Navbar = () => {
   }, [selectedNavLink]);
 
   const handleMenuOpen = () => {
-    if (isMenuOpen === false) {
+    if (!isMenuOpen) {
       setIsMenuOpen(true);
     } else {
       setIsMenuOpen(false);
@@ -56,7 +56,7 @@ export const Navbar = () => {
       <div
         style={{ height: "100%", width: "100%", backgroundColor: "white",  zIndex: "1000"}}
       ></div>
-      <ul className={`ul-${theme}`}>
+      <ul className={`ul-${theme} ${isMenuOpen ? "active" : ""}`}>
 
         <li>
           <NavLink
