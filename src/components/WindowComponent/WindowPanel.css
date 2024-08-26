@@ -1,5 +1,4 @@
 .window-panel {
-    font-family: myFont;
     transition: box-shadow 1s ease;
     background-color: #100c0c;
     color: rgb(255, 255, 255);
@@ -43,9 +42,10 @@
   }
   
   .window-panel-2 {
-    width: 55%;
+    width: 45%;
     min-width: 350px;
     max-width: 1000px;
+
     background-color: #2E2E2E;
 
     /* it for border radius to not be cut by images  */

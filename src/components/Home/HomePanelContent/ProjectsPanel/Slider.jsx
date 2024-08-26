@@ -1,6 +1,6 @@
 import { Fade } from "react-slideshow-image";
 import "./Slider.css";
-import SlidesJSON from "./images"
+import SlidesJSON from "./images/images"
 
 
 export const Slider = () => {

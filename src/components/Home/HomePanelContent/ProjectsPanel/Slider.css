@@ -1,22 +1,20 @@
 .slide-container{
     position: relative;
-    display: inline-block;
+    display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
-/* there is a problem with image, i dont want to stretch it */
 .image-slider {
   height: auto;
   width: 100%;
   display: block;
-  /* border: solid red 1px; */
 }
 /* if you have issues with a little bit of space between image and the windowPanel, this is because the images inside
 are not the same size, adjust to make it work! */
 .text-slider{
     position: absolute;
-    max-width: 200px;
+    width: clamp(200px, 25vw, 350px);
     top: 25%;
     left: 50%;
     background-color: #100c0c;
@@ -69,6 +67,12 @@ are not the same size, adjust to make it work! */
   -ms-flex-align: center;
   align-items: center;
   position: relative;
+
+  /* border: solid blue 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto; */
 }
 .react-slideshow-container .nav {
   z-index: 10;
