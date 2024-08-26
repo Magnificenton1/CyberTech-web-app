@@ -53,11 +53,21 @@
   }
   
   .window-panel-3 {
+    width: 45%;
+    min-width: 368px;
+    max-width: 688px;
+
+    overflow: hidden;
+  }
+
+  .window-panel-4 {
     width: 35%;
     min-width: 350px;
     max-width: 700px;
   }
-  .window-panel-4 {
+
+
+  .window-panel-5 {
     width: 30%;
     min-width: 350px;
     max-width: 650px;
@@ -66,7 +76,7 @@
     box-shadow: 0px 0px 16px 10px rgba(0, 0, 0, 0.6);
   }
 
-  .window-panel-5 {
+  .window-panel-6 {
     /* height: auto; */
     width: 30%;
     min-width: 350px;

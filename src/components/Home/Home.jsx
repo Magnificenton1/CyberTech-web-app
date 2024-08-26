@@ -1,6 +1,6 @@
 import { memo } from "react";
 import { BackgroundAnimation } from "../BackgroundAnimation/BackgroundAnimation";
-import { HomeParallax } from "./HomePanelContent/HomeParallax";
+import { HomePanels } from "./HomePanelContent/HomePanels";
 import { WelcomeMessage } from "./WelcomeMessage/WelcomeMessage";
 import "./Home.css";
 
@@ -10,7 +10,7 @@ export const HomeComponent = () => {
       <div className="home"/>
       <BackgroundAnimation />
       <WelcomeMessage />
-      <HomeParallax />
+      <HomePanels />
     </div>
   );
 };

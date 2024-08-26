@@ -2,7 +2,7 @@ import image1 from './mp1.jpg';
 import image2 from './mp2.jpg';
 import image3 from './mp3.jpg';
 // IMPORTANT STUFF, don't place a lot of text - that's what's Projects on the Navbar are for!
-// 
+// I also recommend images with high resolution
 const SlidesJSON = {
   slides: [
     {

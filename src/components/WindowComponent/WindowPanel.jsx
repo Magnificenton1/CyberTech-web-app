@@ -5,7 +5,7 @@ import "./WindowPanel.css";
 
 const WindowPanelComponent = ({ children, class_number, text}) => {
   // class number is a number that gives the windowPanel it's css values, first 3 numbers are for home page, and 4 and 5 are for members
-  // 4 - default, 5 - gold
+  // 5 - default, 6 - gold
   const MemoizedWindowTab = memo(WindowTab);
   const [isClosed, setIsClosed] = useState(false);
 

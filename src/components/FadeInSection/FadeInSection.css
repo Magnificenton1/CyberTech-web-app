@@ -18,7 +18,7 @@
     }
   }
 
-  .fade-in-section:nth-child(2) {
+  .fade-in-section:nth-child(even) {
     opacity: 0;
     transform: translateX(100%);
     filter: blur(5px);
@@ -26,7 +26,7 @@
     z-index: 20;
   }
 
-  .fade-in-section:nth-child(2).is-visible {
+  .fade-in-section:nth-child(even).is-visible {
     opacity: 1;
     transform: translateX(0);
     filter: blur(0);

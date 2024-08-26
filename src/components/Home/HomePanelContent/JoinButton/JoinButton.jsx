@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./JoinButton.css";
 import { FaDiscord } from "react-icons/fa6";
 import { useTheme } from "../../../Theme/useTheme";
+import { WindowPanel } from "../../../WindowComponent/WindowPanel";
 export const JoinButton = () => {
   const [hovered, setHovered] = useState(false);
   const { theme} = useTheme();
@@ -14,6 +15,7 @@ export const JoinButton = () => {
   };
 
   return (
+    <WindowPanel text={"Dołącz do nas"} class_number={"4"}>
     <div className="join-button-container">
       <div className="join-text">Podoba ci się to co widzisz?</div>
       <div className={`clip-path-circle1 ${hovered === true ? "hovered" : ""}`}>
@@ -26,6 +28,7 @@ export const JoinButton = () => {
         <FaDiscord/>
       </button>
     </div>
+    </WindowPanel>
   );
 };
 // href="https://discord.gg/A8HreVFFa5" target="_blank"

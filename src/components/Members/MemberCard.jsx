@@ -15,7 +15,7 @@ export const MemberCard = ({
   const { theme } = useTheme();
   return (// color is a bool in json that tells if the panel needs to be highlighted, highlighted panel has class_number 5
           // default members panel has number 4
-    <WindowPanel text={role} class_number={color ? 5 : 4}>
+    <WindowPanel text={role} class_number={color ? 6 : 5}>
       <div className="member-card">
         <div className="member-desc">
           <div

@@ -152,6 +152,12 @@ nav .ul-orange li a:hover{
   nav ul.active {
     left: 0;
   }
+  nav .ul-green{
+    border-bottom: solid 10px #00ff77;
+  }
+  nav .ul-orange{
+    border-bottom: solid 10px #f85c2c;
+  }
 
   nav ul li {
     margin: 16px 0;

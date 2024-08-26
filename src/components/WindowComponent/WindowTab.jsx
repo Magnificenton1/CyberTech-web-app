@@ -27,9 +27,9 @@ export const WindowTab = ({ text, setIsClosed, class_number }) => {
   return (// there is only a value for window-tab-5 and text-tab-5 in CSS, the rest is default
           // i wanted some Panels to have different look without creating dependencies, so I came up with simple number values
     <>
-    <div className={`window-tab ${class_number === 5 ? `window-tab-${theme}` : ""}`}>
+    <div className={`window-tab ${class_number === 6 ? `window-tab-${theme}` : ""}`}>
         <div className="tab-section-1">
-          <div className={`text-tab ${class_number === 5 ? `text-tab-${theme}` : ""}`}><FcCommandLine className="command-icon"/>{text}</div>
+          <div className={`text-tab ${class_number === 6 ? `text-tab-${theme}` : ""}`}><FcCommandLine className="command-icon"/>{text}</div>
           <div className="close-tab">
             <div className="close-circle">
             <IoIosClose onClick={handleVisibility} style={{position: "absolute"}}/>
