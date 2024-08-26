@@ -11,6 +11,8 @@
     flex-direction: row;
     justify-content: space-between;
 
+    transition: background-color 0.5s ease;
+
 }
 .window-tab-green{
     background-color: #00ff77;
@@ -55,7 +57,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
 
-    transition: color 0.5s ease;
+    transition: all 0.5s ease;
 }
 .text-tab-green{
     color: #00ff77;

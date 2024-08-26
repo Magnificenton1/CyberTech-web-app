@@ -43,14 +43,14 @@ export const Navbar = () => {
       <div className="switch">
         <ReactSwitch
           onChange={toggleTheme}
-          checked={theme === "orange"}
+          checked={theme === "green"}
           handleDiameter={28}
           height={30}
           width={58}
           uncheckedIcon={false}
           checkedIcon={false}
-          onColor="#f85c2c"
-          offColor="#00ff77"
+          onColor="#00ff77"
+          offColor="#f85c2c"
         />
       </div>
       <div

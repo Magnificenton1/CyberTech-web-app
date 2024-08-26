@@ -3,7 +3,6 @@
     position: absolute;
     height: 300%;
     width: 100%;
-    transition: background-color 0.5s ease;
     z-index: -100;
     background-color: #100c0c;
 }

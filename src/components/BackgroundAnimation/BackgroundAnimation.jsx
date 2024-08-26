@@ -10,7 +10,7 @@ export const BackgroundAnimation = () => {
   const { theme } = useTheme();
   const canvasRef = useRef(null);
   const largeHeaderRef = useRef(null);
-  const [ref, isVisible] = useOnScreen({ threshold: 0.1 });
+  const [ref, isVisible] = useOnScreen({ threshold: 0.1 }); //is visible included in useEffect array, which means it rerenders on being seen but it's not cluncky
   const [resizeFinished, setResizeFinished] = useState(false);
   const [firstLoad, setFirstLoad] = useState(true);
 

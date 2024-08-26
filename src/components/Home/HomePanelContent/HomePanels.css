@@ -16,7 +16,6 @@ rect {
   justify-content: center;
 
   overflow: hidden;
-
   width: 100%;
   height: auto;
 
@@ -95,7 +94,7 @@ p span{
   .home-container {
     align-items: center;
     min-height: 1500px;
-    max-height: 1800px;
+    max-height: 2100px;
   }
   .panel-container1, .panel-container2 {
     position: relative;
