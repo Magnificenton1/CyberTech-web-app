@@ -46,7 +46,7 @@ export const MemberCard = ({
             )}
           </div>
         </div>
-        <img className="member-img" src={placeholder600x400} />
+        <img className="member-img" src={"https://placehold.co/600x400"} />
       </div>
     </WindowPanel>
   );

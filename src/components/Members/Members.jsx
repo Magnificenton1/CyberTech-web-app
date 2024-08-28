@@ -5,6 +5,7 @@ export const Members = () => {
   const { setSelectedNavLink } = useLink();
   useEffect(() => {
     setSelectedNavLink("members");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <div

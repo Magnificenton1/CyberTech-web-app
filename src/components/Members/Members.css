@@ -54,6 +54,9 @@
   .member-desc{
     box-shadow: 0px 15px 20px rgba(0, 0, 0, 1);
   }
+  .member-img{
+    border-bottom-left-radius: 0.5rem;
+  }
 }
 .member-img{
   width: auto;
@@ -62,7 +65,6 @@
   height: 235px;
   display: block;
   border-bottom-right-radius: 0.5rem;
-  border-bottom-left-radius: 0.5rem;
 
 }
 .member-name{

@@ -85,7 +85,7 @@ export const Navbar = () => {
             {selectedNavLink === "members" ? <LogoNavlink2 /> : ""}
           </NavLink>
         </li>
-        <li>
+        {/* <li>
           <NavLink
             to="/projects"
             className={` ${
@@ -96,7 +96,7 @@ export const Navbar = () => {
             Projects
             {selectedNavLink === "projects" ? <LogoNavlink2 /> : ""}
           </NavLink>
-        </li>
+        </li> */}
         <li>
           <NavLink
             className={`${
