@@ -4,7 +4,10 @@ import PropTypes from "prop-types";
 export const ChosenLinkContext = createContext();
 
 export const LinkProvider = ({ children }) => {
-  const [selectedNavLink, setSelectedNavLink] = useState("home");
+  const [selectedNavLink, setSelectedNavLink] = useState(() => {
+    return localStorage.getItem('selectedNav') || 'home';
+  });
+
 
   return (
     <ChosenLinkContext.Provider value={{ selectedNavLink, setSelectedNavLink }}>
