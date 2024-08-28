@@ -47,6 +47,7 @@ C:\\cybertech> `;
       <FadeInSection>
         <div className="panel-container1">
           <WindowPanel text={"Informacje o kole"} class_number={"1"}>
+            <div style={{justifyContent: "center", alignItems: "center", display: "flex", width: "100%", height: "100%"}}>
             <p>
               <TypingEffect
                 text={text_output}
@@ -62,6 +63,7 @@ C:\\cybertech> `;
                 _
               </span>
             </p>
+            </div>
           </WindowPanel>
         </div>
       </FadeInSection>
