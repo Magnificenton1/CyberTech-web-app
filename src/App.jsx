@@ -6,6 +6,7 @@ import { Projects } from "./components/Projects/Projects";
 import { ThemeProvider } from "./components/Theme/ThemeContext";
 import { Footer } from "./components/Footer/Footer";
 import { LinkProvider } from "./components/Navbar/ChosenLinkContext";
+import { ContactUs } from "./components/ContactUs/ContactUs";
 
 function App() {
   
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<Home/>} />
           <Route path="/members" element={<Members/>} />
           <Route path="/projects" element={<Projects/>} />
+          <Route path="/contact-us" element={<ContactUs/>} />
         </Routes>
         <Footer/>
         </LinkProvider>

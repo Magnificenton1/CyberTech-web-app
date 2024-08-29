@@ -19,7 +19,7 @@
   /* border: solid blue 2px; */
   /* min-height: 500px; */
   height: calc(100vh - var(--navbar-height));
-  min-height: 320px;
+  min-height: 488px;
   /* height: 80vh; */
   display: flex;
   flex-direction: row;

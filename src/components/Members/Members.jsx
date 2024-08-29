@@ -13,7 +13,7 @@ export const Members = () => {
     >
       <div className="members-message">
         O to lista członków naszego koła (wyświetlani są tutaj członkowie
-        aktywni, którzy udowodnili ,że chcą rozwijać przyszłość AI):
+        aktywni, którzy udowodnili, że chcą rozwijać przyszłość AI):
       </div>
       <MembersList />
     </div>

@@ -7,7 +7,7 @@ export const YoutubePanel = () => {
       <div className="youtube-container">
         <div className="youtube-iframe-wrapper">
           <iframe
-            src="https://www.youtube.com/watch?v=yIPH7mtDtu8" 
+            src="https://www.youtube.com/embed/tIfBVFOW6Bk?si=frmhZmFiypNO3eg4" 
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen

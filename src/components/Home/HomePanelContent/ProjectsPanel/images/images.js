@@ -7,7 +7,7 @@ const SlidesJSON = {
   slides: [
     {
       url: image1,
-      title: 'Przetwarzanie obrazów',
+      title: 'Sztuczna Inteligencja',
       caption: 'Jest to wyjątkowo szybko rozwijąca sią dziedzina informatyki umożliwiająca rozwiązywanie „życiowych” problemów.'
     },
     {

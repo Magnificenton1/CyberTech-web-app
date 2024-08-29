@@ -18,12 +18,15 @@ export const Navbar = () => {
   const { selectedNavLink} = useLink();
 
 
+
   // const [theme, setTheme] = useState(() => {
   //   return localStorage.getItem('theme') || 'orange';
   // });
 
   useEffect(() => {
-    setIsMenuOpen(false);
+    setTimeout(() => {
+      setIsMenuOpen(false);
+    }, 600);
   }, [selectedNavLink]);
 
   const handleMenuOpen = () => {
@@ -100,6 +103,7 @@ export const Navbar = () => {
         </li> */}
         <li>
           <NavLink
+            to="/contact-us"
             className={`${
               selectedNavLink === "contact-us" ? "navbar-chosen" : ""
             }`}
