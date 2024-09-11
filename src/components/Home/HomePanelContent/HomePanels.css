@@ -36,7 +36,6 @@ rect {
   background-image: url("./backgroundsvg.svg");
 }
 
-/* somehow nth-child(odd) does not work */
 .panel-container1{
   display: flex;
   flex-direction: row;
@@ -55,12 +54,19 @@ rect {
   margin-bottom: 80px;
 
 }
-
+.info-text-div{
+  display: grid;
+}
+.invisible-text{
+  visibility: hidden;
+  margin-bottom: 15px;
+}
 p {
   padding: 12px;
   font-size: clamp(0.8rem, 1vw + 0.2rem, 1.3rem);
   font-family: myFont;
   line-height: 115%;
+  grid-area: 1 / 1;
 }
 p span{
   font-family: myFont;

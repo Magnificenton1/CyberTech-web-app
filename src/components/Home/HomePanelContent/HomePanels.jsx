@@ -47,7 +47,7 @@ C:\\cybertech> `;
       <FadeInSection>
         <div className="panel-container1">
           <WindowPanel text={"Informacje o kole"} class_number={"1"}>
-            <div style={{justifyContent: "center", alignItems: "center", display: "flex", width: "100%", height: "100%"}}>
+            <div className="info-text-div">
             <p>
               <TypingEffect
                 text={text_output}
@@ -63,18 +63,21 @@ C:\\cybertech> `;
                 _
               </span>
             </p>
+            <p className="invisible-text" dangerouslySetInnerHTML={{ __html: text_output }} >
+              {/* invisible text to stretch a parent p to it's ending size for typing effect */}
+            </p>
             </div>
           </WindowPanel>
         </div>
       </FadeInSection>
       <FadeInSection>
         <div className="panel-container2">
-          <Slider />
+        <YoutubePanel />
         </div>
       </FadeInSection>
       <FadeInSection>
         <div className="panel-container1">
-          <YoutubePanel />
+          <Slider/>
         </div>
       </FadeInSection>
       <FadeInSection>

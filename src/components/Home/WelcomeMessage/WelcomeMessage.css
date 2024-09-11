@@ -16,11 +16,8 @@
     transition: fill 0.5s ease;
   }
 .welcome-container {
-  /* border: solid blue 2px; */
-  /* min-height: 500px; */
   height: calc(100vh - var(--navbar-height));
   min-height: 488px;
-  /* height: 80vh; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -35,7 +32,6 @@
   display: flex;
   align-items: center;
   text-align: center;
-  /* border: solid 2px red; */
   margin-right: 20px;
   margin-left: 20px;
 
@@ -46,11 +42,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* border: solid 2px blue; */
-  /* width: 30%;
-    min-width: 350px;
-    height: 30vh;
-    min-height: 300px; */
 
   width: clamp(350px, 70vh, 800px);
   height: clamp(350px, 50vh, 800px);

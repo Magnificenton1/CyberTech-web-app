@@ -38,7 +38,7 @@
     width: 55%;
     min-width: 350px;
     max-width: 1300px;
-    min-height: 635px;
+
   }
   
   .window-panel-2 {
@@ -77,7 +77,6 @@
   }
 
   .window-panel-6 {
-    /* height: auto; */
     width: 30%;
     min-width: 350px;
     max-width: 650px;

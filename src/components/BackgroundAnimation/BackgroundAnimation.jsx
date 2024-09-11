@@ -2,17 +2,14 @@ import { useTheme } from "../Theme/useTheme";
 import "./BackgroundAnimation.css";
 import { useRef, useEffect, useState, useCallback } from "react";
 import { gsap, Circ } from "gsap";
-import useOnScreen from "../UseOnScreen/useOnScreen";
 import throttle from 'lodash/throttle';
-import { Quadtree, Rectangle } from './Quadtree'; // Import the classes
+import { Quadtree, Rectangle } from './Quadtree';
 
 export const BackgroundAnimation = () => {
   const { theme } = useTheme();
   const canvasRef = useRef(null);
   const largeHeaderRef = useRef(null);
-  const [ref, isVisible] = useOnScreen({ threshold: 0.1 }); //is visible included in useEffect array, which means it rerenders on being seen but it's not cluncky
   const [resizeFinished, setResizeFinished] = useState(false);
-  const [firstLoad, setFirstLoad] = useState(true);
 
   const debounce = (func, wait) => {
     let timeout;
@@ -28,10 +25,6 @@ export const BackgroundAnimation = () => {
 
   useEffect(() => {
     const debouncedResizeHandler = debounce(handleResize, 500);
-
-    if (!isVisible && !firstLoad) return;
-
-    setFirstLoad(false);
     const width = window.innerWidth;
     const height = window.innerHeight;
     const target = { x: width / 2, y: height / 2 };
@@ -177,13 +170,11 @@ export const BackgroundAnimation = () => {
       window.removeEventListener("scroll", scrollCheck);
       window.removeEventListener("resize", debouncedResizeHandler);
     };
-  }, [isVisible, theme, firstLoad, resizeFinished, handleResize]);
+  }, [theme, resizeFinished, handleResize]);
 
   return (
     <div className="large-header" ref={largeHeaderRef}>
-      <div ref={ref}>
         <canvas ref={canvasRef}></canvas>
-      </div>
     </div>
   );
 };

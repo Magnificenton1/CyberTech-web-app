@@ -67,12 +67,6 @@ are not the same size, adjust to make it work! */
   -ms-flex-align: center;
   align-items: center;
   position: relative;
-
-  /* border: solid blue 1px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: auto; */
 }
 .react-slideshow-container .nav {
   z-index: 10;

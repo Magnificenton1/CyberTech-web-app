@@ -8,6 +8,8 @@ import { useTheme } from "../Theme/useTheme";
 // import { VscChromeMinimize } from "react-icons/vsc";
 // import { VscChromeMaximize } from "react-icons/vsc";
 
+// I LEFT A LOT OF THINGS COMMANDED IN CASE I WANTED MORE DETAIL ON WINDOW TAB - no functionality sadly
+
 export const WindowTab = ({ text, setIsClosed, class_number }) => {
   const setIsVisible = useVisibility();
   const { theme} = useTheme();

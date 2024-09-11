@@ -13,8 +13,8 @@ export const HomeComponent = () => {
   }, []);
 
   return (
-    <div>
-      <div className="home"/>
+    <div className="home">
+      <div className="home-background"/>
       <BackgroundAnimation />
       <WelcomeMessage />
       <HomePanels />

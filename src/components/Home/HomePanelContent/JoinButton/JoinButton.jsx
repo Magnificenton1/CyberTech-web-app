@@ -31,4 +31,3 @@ export const JoinButton = () => {
     </WindowPanel>
   );
 };
-// href="https://discord.gg/A8HreVFFa5" target="_blank"
