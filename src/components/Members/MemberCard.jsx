@@ -1,6 +1,5 @@
 import { useTheme } from "../Theme/useTheme";
 import { WindowPanel } from "../WindowComponent/WindowPanel";
-import placeholder600x400 from "./../../assets/placeholder600x400.png"
 import "./Members.css";
 import PropTypes from "prop-types";
 export const MemberCard = ({
@@ -46,7 +45,7 @@ export const MemberCard = ({
             )}
           </div>
         </div>
-        <img className="member-img" src={"https://placehold.co/600x400"} />
+        <img className="member-img" src={image} />
       </div>
     </WindowPanel>
   );
@@ -58,6 +57,6 @@ MemberCard.propTypes = {
   role: PropTypes.string.isRequired,
   desc: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-  projects: PropTypes.string.isRequired,
-  color: PropTypes.bool.isRequired,
+  projects: PropTypes.arrayOf(PropTypes.string).isRequired,
+  color: PropTypes.number.isRequired,
 };

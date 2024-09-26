@@ -1,6 +1,6 @@
 import { Fade } from "react-slideshow-image";
 import "./Slider.css";
-import SlidesJSON from "./images/images"
+import SlidesJSON from "../../../../EditableThings/HomeSliderPanel/images"
 import { WindowPanel } from "../../../WindowComponent/WindowPanel";
 
 
@@ -27,7 +27,7 @@ export const Slider = () => {
     const indicators = (index) => (<div className="slide-indicator">{index + 1}</div>);
 
   return (
-    <WindowPanel text={"Nasze projekty"} class_number={"2"}>
+    <WindowPanel text={"Nasze projekty"} class_number={2}>
     <Fade {...properties} indicators={indicators}>
       {SlidesJSON.slides.map((slideImage, index) => (
         <div key={index} className="slide-container">

@@ -54,47 +54,6 @@ rect {
   margin-bottom: 80px;
 
 }
-.info-text-div{
-  display: grid;
-}
-.invisible-text{
-  visibility: hidden;
-  margin-bottom: 15px;
-}
-p {
-  padding: 12px;
-  font-size: clamp(0.8rem, 1vw + 0.2rem, 1.3rem);
-  font-family: myFont;
-  line-height: 115%;
-  grid-area: 1 / 1;
-}
-p span{
-  font-family: myFont;
-}
-.blinking-cursor {
-  font-size: clamp(0.8rem, 1vw + 0.2rem, 1.3rem);
-  color: white;
-  font-family: myFont;
-}
-.blinking-cursor-animation{
-  -webkit-animation: 1.5s blink step-end infinite;
-  -moz-animation: 1.5s blink step-end infinite;
-  -ms-animation: 1.5s blink step-end infinite;
-  -o-animation: 1.5s blink step-end infinite;
-  animation: 1.5s blink step-end infinite;
-}
-.blinking-cursor-disabled{
-  display: none;
-}
-
-@keyframes blink {
-  from, to {
-    color: transparent;
-  }
-  50% {
-    color: white;
-  }
-}
 
 @media (max-width: 500px), (min-width: 3000px) {
   .home-container {

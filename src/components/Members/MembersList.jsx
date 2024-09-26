@@ -1,5 +1,5 @@
 import { MemberCard } from "./MemberCard";
-import MembersJSON from "./members.json";
+import MembersJSON from "./../../EditableThings/Members/members";
 // zmieniamy JSONa jeśli chcemy zmieniać członków itp
 
 import "./Members.css";

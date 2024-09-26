@@ -1,0 +1,1 @@
+export const youtube_src = "https://www.youtube.com/embed/mM-8VmFUvRg?si=hgUyLoziVksJ57s6"

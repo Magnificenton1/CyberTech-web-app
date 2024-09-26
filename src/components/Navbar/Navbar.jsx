@@ -10,6 +10,7 @@ import { useLink } from "./useLink";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [themeChangeDisable, setThemeChangeDisable] = useState(false);
   const { theme, toggleTheme } = useTheme();
   const { selectedNavLink } = useLink();
 
@@ -21,7 +22,13 @@ export const Navbar = () => {
 
   // timeout is added because the menu hides instantly and
   // it's startling for some users
-
+  const handleThemeChange = () => {
+    setThemeChangeDisable(true);
+    toggleTheme();
+    setTimeout(() => {
+      setThemeChangeDisable(false)
+    }, 600);
+  }
   const handleMenuOpen = () => {
     if (!isMenuOpen) {
       setIsMenuOpen(true);
@@ -40,8 +47,9 @@ export const Navbar = () => {
       </NavLink>
       <div className="switch">
         <ReactSwitch
-          onChange={toggleTheme}
+          onChange={handleThemeChange}
           checked={theme === "green"}
+          disabled={themeChangeDisable}
           handleDiameter={28}
           height={30}
           width={58}

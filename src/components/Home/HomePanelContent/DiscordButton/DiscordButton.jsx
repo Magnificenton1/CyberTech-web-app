@@ -1,8 +1,9 @@
 import { useState } from "react";
-import "./JoinButton.css";
+import "./DiscordButton.css";
 import { FaDiscord } from "react-icons/fa6";
 import { useTheme } from "../../../Theme/useTheme";
 import { WindowPanel } from "../../../WindowComponent/WindowPanel";
+import { discord_url } from "../../../../EditableThings/DiscordButton/discordURL";
 export const JoinButton = () => {
   const [hovered, setHovered] = useState(false);
   const { theme} = useTheme();
@@ -10,7 +11,7 @@ export const JoinButton = () => {
   const handleClick = () => {
     // Wait before redirecting - it's mainly for mobile users to experience the animation, because they cannot hover without clicking
     setTimeout(() => {
-      window.open('https://discord.gg/A8HreVFFa5', '_blank');
+      window.open(`${discord_url}`, '_blank');
     }, 1300);
   };
 

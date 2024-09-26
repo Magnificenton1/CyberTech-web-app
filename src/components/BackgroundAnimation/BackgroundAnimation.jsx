@@ -122,6 +122,24 @@ export const BackgroundAnimation = () => {
         ease: Circ.easeInOut,
         onComplete: () => shiftPoint(p),
       });
+      // gsap.to(p, {
+      //   duration: 2,
+      //   opacity: 0,
+      //   ease: Circ.easeInOut,
+      //   onComplete: () => {
+      //     // Move the point to a new position
+      //     p.x = newX;
+      //     p.y = newY;
+    
+      //     // Fade in over 2 seconds
+      //     gsap.to(p, {
+      //       duration: 2,
+      //       opacity: 1,
+      //       ease: Circ.easeInOut,
+      //       onComplete: () => shiftPoint(p), // Repeat the process
+      //     });
+      //   },
+      // });
     }
 
     function drawLines(p) {

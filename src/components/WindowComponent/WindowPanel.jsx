@@ -20,9 +20,9 @@ const WindowPanelComponent = ({ children, class_number, text}) => {
 };
 
 WindowPanelComponent.propTypes = {
-  children: PropTypes.node.isRequired, // Validate that children is a valid React node
-  class_number: PropTypes.string, // Ensure class_number is a string
-  text: PropTypes.string // Ensure text is a string
+  children: PropTypes.node.isRequired,
+  class_number: PropTypes.number,
+  text: PropTypes.string
 };
 
 export const WindowPanel = memo(WindowPanelComponent);

@@ -55,6 +55,6 @@ export const WindowTab = ({ text, setIsClosed, class_number }) => {
 
 WindowTab.propTypes = {
   text: PropTypes.string.isRequired,
-  setIsClosed: PropTypes.bool.isRequired,
+  setIsClosed: PropTypes.func.isRequired,
   class_number: PropTypes.number.isRequired
 };

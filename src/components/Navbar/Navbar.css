@@ -41,11 +41,22 @@ nav, nav * {
   display: flex;
   padding-top: 18px;
   padding-left: 30px;
+  outline: none;
+  box-shadow: none;
   /* ogarnac jak wysrodkowac a nie jakis padding */
-
   background-color: #ffffff;
 }
-
+.react-switch-handle {
+  outline: none;          
+  box-shadow: none;
+}
+.react-switch-handle:focus {
+  outline: none;
+  box-shadow: none;
+}
+.react-switch-handle::-webkit-focus-ring {
+  outline: none;
+}
 @keyframes scroll-watcher {
   to {
     scale: 1 1;
