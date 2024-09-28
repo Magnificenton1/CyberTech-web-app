@@ -1,14 +1,15 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { WindowPanel } from "../../../WindowComponent/WindowPanel"
 import { TypingEffect } from "../TypingEffect"
 import { generate_text_output } from "../../../../EditableThings/HomeInfoPanel/HomeInfoPanelText";
 import "./InfoPanel.css";
+import { ThemeContext } from "../../../Theme/ThemeContext";
 
 
 export const InfoPanel = () => {
     const [textEnd, setTextEnd] = useState(false);
-    const renderTheme = localStorage.getItem("theme");
-    const text_output = generate_text_output(renderTheme);
+    const { theme } = useContext(ThemeContext);
+    const text_output = generate_text_output(theme);
     
 
     return (<WindowPanel text={"Informacje o kole"} class_number={1}>
