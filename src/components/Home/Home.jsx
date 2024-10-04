@@ -16,7 +16,10 @@ export const HomeComponent = () => {
 
   return (
     <div className="home">
-  <div className={`home-background home-background-${theme}`}/>
+  <div className={`home-background home-background-${theme}`}>
+    <div className="background-layer background-layer-1" />
+      <div className="background-layer background-layer-2" />
+      </div>
       <BackgroundAnimation />
       <WelcomeMessage />
       <HomePanels />

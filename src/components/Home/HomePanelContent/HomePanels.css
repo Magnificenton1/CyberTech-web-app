@@ -55,14 +55,13 @@ rect {
 
 }
 
-@media (max-width: 500px), (min-width: 3000px) {
+@media (max-width: 1000px), (min-width: 3000px) {
   .home-container {
     align-items: center;
     min-height: 1500px;
     max-height: 2100px;
   }
   .panel-container1, .panel-container2 {
-    position: relative;
     justify-content: center;
     align-items: center;
     width: 350px;

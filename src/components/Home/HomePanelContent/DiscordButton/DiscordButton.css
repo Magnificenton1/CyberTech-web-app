@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #2c2f33;
+  background-color: #100c0c;
 }
 .join-text{
   position: absolute;
@@ -91,7 +91,7 @@
   height: 100%;
   top: 0;
   left: 0;
-  background: #23272a;
+  background: #100c0c;
   clip-path: circle(0% at 50% 50%);
 
   transition: clip-path 0.5s ease-out;

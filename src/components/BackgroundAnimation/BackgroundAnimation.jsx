@@ -113,7 +113,7 @@ export const BackgroundAnimation = () => {
       const xMovement = p.originX - 50 + Math.random() * 100;
       const yMovement = p.originY - 50 + Math.random() * 100;
       const newX = Math.max(0, Math.min(xMovement, width));
-      const newY = Math.max(0, Math.min(yMovement, height - 30)); // Ensure yMovement is at least 30px from the bottom
+      const newY = Math.max(0, Math.min(yMovement, height - 80)); // Ensure yMovement is at least 30px from the bottom
 
       gsap.to(p, {
         duration: 1 + 1 * Math.random(),
@@ -122,24 +122,6 @@ export const BackgroundAnimation = () => {
         ease: Circ.easeInOut,
         onComplete: () => shiftPoint(p),
       });
-      // gsap.to(p, {
-      //   duration: 2,
-      //   opacity: 0,
-      //   ease: Circ.easeInOut,
-      //   onComplete: () => {
-      //     // Move the point to a new position
-      //     p.x = newX;
-      //     p.y = newY;
-    
-      //     // Fade in over 2 seconds
-      //     gsap.to(p, {
-      //       duration: 2,
-      //       opacity: 1,
-      //       ease: Circ.easeInOut,
-      //       onComplete: () => shiftPoint(p), // Repeat the process
-      //     });
-      //   },
-      // });
     }
 
     function drawLines(p) {

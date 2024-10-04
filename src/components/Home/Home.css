@@ -1,22 +1,79 @@
-
-.home{
-    height: 100%;
-    width: 100%;
-    overflow-y: hidden;
+.home {
+  position: relative; 
+  min-height: 100vh; 
+  width: 100%; 
+  overflow: hidden;
 }
 /* this is the one time i'll do something stupid - 
 overflow hidden + too much height but i encountered error with this and didn't know
 how to fix them - good luck future me */
-.home-background{
+.home-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1; 
+}
+.background-layer {
     position: absolute;
-    height: 3000px;
+    top: 0;
+    left: 0;
+    height: 100%;
     width: 100%;
-    z-index: -100;
-    transition: all 0.5s ease;
+    transition: opacity 0.5s ease;
+  }
+
+
+.background-layer-1 {
+    background: linear-gradient(180deg, #145829 0%, #100c0c 6%);
+    opacity: 1;
+  }
+  
+  .background-layer-2 {
+    background: linear-gradient(180deg, #ffcbb6 0%, #ffffff 6%);
+    opacity: 0;
+  }
+  
+  .home-background-green .background-layer-1 {
+    opacity: 1;
+  }
+  
+  .home-background-green .background-layer-2 {
+    opacity: 0;
+  }
+  
+  .home-background-orange .background-layer-1 {
+    opacity: 0;
+  }
+  
+  .home-background-orange .background-layer-2 {
+    opacity: 1;
+  }
+/* .home-background-green {
+    background: #71ffa8;
+    background: linear-gradient(180deg, #12682c 0%, #100c0c  6%);
 }
-.home-background-green{
-    background-color: #100c0c;
-}
-.home-background-orange{
-    background-color: #f1edeb;
-}
+.home-background-orange {
+    background: #ffcbb6;
+background: linear-gradient(180deg, #ffcbb6 0%, #ffffff 6%);
+} */
+.home-background-green {
+    background: linear-gradient(180deg, #005f1d 0%, #100c0c 6%);
+  }
+  
+  .home-background-orange {
+    background: linear-gradient(180deg, #ffcbb6 0%, #ffffff 6%);
+  }
+  
+  .home-background-green::before {
+    background-image: linear-gradient(180deg, #ff758c 0%, #ffcbb6 100%);
+  }
+  
+  .home-background-orange::before {
+    background-image: linear-gradient(180deg, #ff758c 0%, #ffffff 100%);
+  }
+  
+  .home-background:hover::before {
+    opacity: 1;
+  }

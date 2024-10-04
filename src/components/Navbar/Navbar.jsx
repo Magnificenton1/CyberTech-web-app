@@ -12,7 +12,7 @@ export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [themeChangeDisable, setThemeChangeDisable] = useState(false);
   const { theme, toggleTheme } = useTheme();
-  const { selectedNavLink } = useLink();
+  const { selectedNavLink, setSelectedNavLink } = useLink();
 
   useEffect(() => {
     setTimeout(() => {
@@ -42,7 +42,7 @@ export const Navbar = () => {
   return (
     <nav>
       <div className={`scroll-watcher-${theme} scroll-watcher`}></div>
-      <NavLink className="cybertech-title" to="/">
+      <NavLink className="cybertech-title" to="/" onClick={() => setSelectedNavLink("home")}>
         <LogoTextNavbar />
       </NavLink>
       <div className="switch">
@@ -72,6 +72,7 @@ export const Navbar = () => {
           <NavLink
             to="/"
             className={` ${selectedNavLink === "home" ? "navbar-chosen" : ""}`}
+            onClick={() => setSelectedNavLink("home")}
           >
             {selectedNavLink === "home" ? (
               <LogoNavlink1 style={{ marginLeft: "2px" }} />
@@ -88,6 +89,7 @@ export const Navbar = () => {
             className={` ${
               selectedNavLink === "members" ? "navbar-chosen" : ""
             }`}
+            onClick={() => setSelectedNavLink("members")}
           >
             {selectedNavLink === "members" ? <LogoNavlink1 /> : ""}
             Members
@@ -100,6 +102,7 @@ export const Navbar = () => {
             className={`${
               selectedNavLink === "contact-us" ? "navbar-chosen" : ""
             }`}
+            onClick={() => setSelectedNavLink("contact-us")}
           >
             {selectedNavLink === "contact-us" ? <LogoNavlink1 /> : ""}
             Contact us

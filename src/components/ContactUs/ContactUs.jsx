@@ -26,7 +26,7 @@ export const ContactUs = () => {
           dr inż Krzysztof Halawa <a href="mailto:krzysztof.halawa@pwr.edu.pl">(krzysztof.halawa@pwr.edu.pl)</a>
         </div>
         <div className="contact-section">
-          <h3>Discord</h3>
+          <h3>Discord:</h3>
           <a href="https://discord.gg/A8HreVFFa5">https://discord.gg/A8HreVFFa5</a>
         </div>
       </div>

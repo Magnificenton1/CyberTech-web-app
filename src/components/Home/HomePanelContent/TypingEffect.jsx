@@ -8,13 +8,18 @@ const TypingEffectComponent = ({ text, onTypingEnd }) => {
   useEffect(() => {
     if (index < text.length) {
       const timeout = setTimeout(() => {
-        setDisplayedText((prev) => prev + text[index]);
+        // fix to this component regarding dynamic theme changes was made by https://github.com/0stam
+        setDisplayedText(text.slice(0, index));
         setIndex((prev) => prev + 1);
       }, 2); // text delay - now it's really fast
 
       return () => clearTimeout(timeout);
-    } else if (onTypingEnd) {
-      onTypingEnd();
+    } else {
+      setDisplayedText(text);
+
+      if (onTypingEnd) {
+        onTypingEnd();
+      }
     }
   }, [index, text, onTypingEnd]);
 
