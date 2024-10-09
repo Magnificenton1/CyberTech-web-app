@@ -1,1 +1,0 @@
-export const discord_url = "https://discord.gg/A8HreVFFa5"

@@ -9,7 +9,10 @@ export const Members = () => {
   }, []);
   return (
     <div
-      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+      style={{ display: "flex", flexDirection: "column", alignItems: "center",
+        background: "linear-gradient(180deg, #121211 0%, #ffffff 12%)"
+       }}
+      
     >
       <div className="members-message">
         O to lista członków naszego koła (wyświetlani są tutaj członkowie

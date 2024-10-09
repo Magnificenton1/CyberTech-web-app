@@ -1,9 +1,12 @@
 import { useEffect } from "react";
 import { useLink } from "../Navbar/useLink";
 import "./ContactUs.css";
+import { useTheme } from "../Theme/useTheme";
+import { discord_url, facebook_url } from "../../EditableThings/Links/links";
 
 export const ContactUs = () => {
   const { setSelectedNavLink } = useLink();
+  const { theme } = useTheme();
   useEffect(() => {
     setSelectedNavLink("contact-us");
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -11,6 +14,10 @@ export const ContactUs = () => {
 
   return (
     <div className="contact-container">
+      <div className={`home-background home-background-${theme}`}>
+    <div className="background-layer background-layer-1" />
+      <div className="background-layer background-layer-2" />
+      </div>
       <div id="contact-box">
         <div className="contact-section">
           <h3>Adres email:</h3>
@@ -27,7 +34,11 @@ export const ContactUs = () => {
         </div>
         <div className="contact-section">
           <h3>Discord:</h3>
-          <a href="https://discord.gg/A8HreVFFa5">https://discord.gg/A8HreVFFa5</a>
+          <a href={discord_url}>{discord_url}</a>
+        </div>
+        <div className="contact-section">
+          <h3>Facebook:</h3>
+          <a href={facebook_url}>{facebook_url}</a>
         </div>
       </div>
     </div>

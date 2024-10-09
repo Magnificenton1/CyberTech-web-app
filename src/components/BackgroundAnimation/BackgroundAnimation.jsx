@@ -43,9 +43,9 @@ export const BackgroundAnimation = () => {
     const qtree = new Quadtree(boundary, 4);
 
     for (let x = 0; x < width; x += width / 8) {
-      for (let y = 0; y < height - 30; y += height / 8) {
+      for (let y = 0; y < height - 80; y += height / 8) {
         const px = x + (Math.random() * width) / 8;
-        const py = y + (Math.random() * (height - 30)) / 8; // Ensure points are not within 30px of the bottom
+        const py = y + (Math.random() * (height - 80)) / 8; // Ensure points are not within 30px of the bottom
         const p = { x: px, y: py, originX: px, originY: py };
         points.push(p);
         qtree.insert(p);

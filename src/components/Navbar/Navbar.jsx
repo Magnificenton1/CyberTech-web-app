@@ -18,6 +18,7 @@ export const Navbar = () => {
     setTimeout(() => {
       setIsMenuOpen(false);
     }, 200);
+    window.scrollTo(0, 0);
   }, [selectedNavLink]);
 
   // timeout is added because the menu hides instantly and

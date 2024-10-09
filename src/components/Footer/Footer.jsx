@@ -1,12 +1,32 @@
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaGithubSquare } from "react-icons/fa";
+import { FaDiscord } from "react-icons/fa6";
 import "./Footer.css";
+import { discord_url, facebook_url } from "../../EditableThings/Links/links";
 
 export const Footer = () => {
   return (
     <div className={`footer`}>
-      <div className="science-club-div"></div>
+      <div className="science-club-div">
+      <div>CyberTech: Linked by Cybertech</div>
+        Kontakt:{" "}
+        <a
+          href="mailto:cybertech-pwr@proton.me"
+          target="_blank"
+        >
+          cybertech-pwr@proton.me
+        </a>
+        <div>
+          Social media:{" "}
+          <a href={facebook_url} target="_blank">
+            <FaFacebookSquare />
+          </a>{" "}
+          <a href={discord_url} target="_blank">
+            <FaDiscord/>
+          </a>
+        </div>
+      </div>
       <div className="creator-div">
         <div>Strona została wykonana przez: Konrad Florczak</div>
         Kontakt:{" "}
