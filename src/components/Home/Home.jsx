@@ -14,6 +14,7 @@ export const HomeComponent = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+
   return (
     <div className="home">
   <div className={`home-background home-background-${theme}`}>

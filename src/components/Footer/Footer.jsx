@@ -9,12 +9,9 @@ export const Footer = () => {
   return (
     <div className={`footer`}>
       <div className="science-club-div">
-      <div>CyberTech: Linked by Cybertech</div>
+        <div>CyberTech: Linked by Cybertech</div>
         Kontakt:{" "}
-        <a
-          href="mailto:cybertech-pwr@proton.me"
-          target="_blank"
-        >
+        <a href="mailto:cybertech-pwr@proton.me" target="_blank">
           cybertech-pwr@proton.me
         </a>
         <div>
@@ -23,7 +20,7 @@ export const Footer = () => {
             <FaFacebookSquare />
           </a>{" "}
           <a href={discord_url} target="_blank">
-            <FaDiscord/>
+            <FaDiscord />
           </a>
         </div>
       </div>
@@ -36,8 +33,11 @@ export const Footer = () => {
         >
           https://www.linkedin.com/in/konrad-florczak-284831314/
         </a>{" "}
-        -{" "}
-        <a href="mailto:281110@student.pwr.edu.pl">281110@student.pwr.edu.pl</a>
+        <div>
+          <a href="mailto:281110@student.pwr.edu.pl">
+            281110@student.pwr.edu.pl
+          </a>
+        </div>
         <div>
           Social media:{" "}
           <a href="https://github.com/Magnificenton1" target="_blank">
