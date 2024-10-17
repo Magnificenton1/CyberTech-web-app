@@ -1,35 +1,50 @@
-.fade-in-section {
-    opacity: 0;
-    transform: translateX(-100%);
-    filter: blur(5px);
-    transition: opacity 1s ease-out, transform 1s ease;
-    z-index: 20;
-  }
-  
-  .fade-in-section.is-visible {
-    opacity: 1;
-    transform: translateX(0);
+.fade-in-section{
+  opacity: 0;
+  transform: scale(0.2) translateY(-20px); /* Start small and slightly above */
+  transform-origin: center; /* Opens from the center */
+  filter: blur(5px);
+  transition: opacity 0.2s ease-out, transform 0.45s cubic-bezier(0.22, 1.11, 0.95, 1);
+  z-index: 20;
+}
+.fade-in-section.is-visible{
+  opacity: 1;
+    transform: scale(1) translateY(0); /* Full size and position */
     filter: blur(0);
-  }
+}
+/* .fade-in-section {
+  opacity: 0;
+  transform: translateX(-100%) translateY(-30%) scale(0.25);
+  filter: blur(5px);
+  transition: opacity 1s ease-out, transform 0.75s ease;
+  z-index: 20;
+  transform-origin: top right;
+}
 
-  @media(prefers-reduced-motion){
-    .fade-in-section{
-      transition: none
-    }
-  }
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateX(0) translateY(0) scale(1);
+  filter: blur(0);
+}
 
-  .fade-in-section:nth-child(even) {
-    opacity: 0;
-    transform: translateX(100%);
-    filter: blur(5px);
-    transition: opacity 1s ease-out, transform 1s ease;
-    z-index: 20;
+@media (prefers-reduced-motion) {
+  .fade-in-section {
+      transition: none;
   }
+}
 
-  .fade-in-section:nth-child(even).is-visible {
-    opacity: 1;
-    transform: translateX(0);
-    filter: blur(0);
-  } 
+.fade-in-section:nth-child(even) {
+  opacity: 0;
+  transform: translateX(100%) translateY(-50%) scale(0.25);
+  filter: blur(5px);
+  transition: opacity 1s ease-out, transform 0.75s ease;
+  transform-origin: top left;
+  z-index: 20;
+}
+
+.fade-in-section:nth-child(even).is-visible {
+  opacity: 1;
+  transform: translateX(0) translateY(0) scale(1);
+  filter: blur(0);
+} */
   /* NWM CZEMU ALE nth-child(2) JEST ZEPSUTY JEŚLI ROBISZ REFRESHA ALE TYLKO NA SAMYM DNIE STRONY XD */
   /* UPDATE - po długim czasie po prostu dałem żeby nie było overflow i no działa ale dziwne */
