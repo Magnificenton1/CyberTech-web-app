@@ -3,7 +3,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(180deg, #1d1d1c 0%, #ffffff 4%);
+    background: linear-gradient(180deg, #828282 0%, #ffffff 3%);
+}
+.contact-container-green{
+  background: #100c0c;
+  color: white;
 }
 #contact-box{
     /* border: solid red 4px; */
@@ -14,70 +18,3 @@
 .contact-section{
     margin-bottom: 30px;
 }
-
-.home-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: -1; 
-  }
-  .background-layer {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      transition: opacity 0.5s ease;
-    }
-  
-  
-  .background-layer-1 {
-      background: linear-gradient(180deg, #145829 0%, #100c0c 6%);
-      opacity: 1;
-    }
-    
-    .background-layer-2 {
-      background: linear-gradient(180deg, #ffcbb6 0%, #ffffff 6%);
-      opacity: 0;
-    }
-    
-    .home-background-green .background-layer-1 {
-      opacity: 1;
-    }
-    
-    .home-background-green .background-layer-2 {
-      opacity: 0;
-    }
-    
-    .home-background-orange .background-layer-1 {
-      opacity: 0;
-    }
-    
-    .home-background-orange .background-layer-2 {
-      opacity: 1;
-    }
-  /* .home-background-green {
-      background: #71ffa8;
-      background: linear-gradient(180deg, #12682c 0%, #100c0c  6%);
-  }
-  .home-background-orange {
-      background: #ffcbb6;
-  background: linear-gradient(180deg, #ffcbb6 0%, #ffffff 6%);
-  } */
-  .home-background-green {
-      background: linear-gradient(180deg, #005f1d 0%, #100c0c 6%);
-    }
-    
-    .home-background-orange {
-      background: linear-gradient(180deg, #ffcbb6 0%, #ffffff 6%);
-    }
-    
-    .home-background-green::before {
-      background-image: linear-gradient(180deg, #ff758c 0%, #ffcbb6 100%);
-    }
-    
-    .home-background:hover::before {
-      opacity: 1;
-    }

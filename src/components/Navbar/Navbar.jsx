@@ -46,6 +46,14 @@ export const Navbar = () => {
   return (
     <nav>
       <div className={`scroll-watcher-${theme} scroll-watcher`}></div>
+      <div
+        style={{
+          height: "100%",
+          width: "12%",
+          backgroundColor: "white",
+          zIndex: "1000",
+        }}
+      ></div>
       <NavLink className="cybertech-title" to="/" onClick={() => setSelectedNavLink("home")}>
         <LogoTextNavbar />
       </NavLink>
@@ -87,7 +95,7 @@ export const Navbar = () => {
             {selectedNavLink === "home" ? <LogoNavlink2 /> : ""}
           </NavLink>
         </li>
-        <li>
+        {/* <li>
           <NavLink
             to="/members"
             className={` ${
@@ -99,7 +107,7 @@ export const Navbar = () => {
             Members
             {selectedNavLink === "members" ? <LogoNavlink2 /> : ""}
           </NavLink>
-        </li>
+        </li> */}
         <li>
           <NavLink
             to="/contact-us"

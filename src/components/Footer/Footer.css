@@ -1,7 +1,7 @@
 .footer{
     width: 100%;
     margin-top: -5px;
-    transition: background-color 0.5s ease;
+    /* transition: background-color 0.5s ease; */
     padding: 10px;
 
     display: flex;
@@ -11,6 +11,11 @@
     font-size: 11px;
 
     color: gray;
+}
+.footer-green{
+    background-color: #100c0c;
+}
+.footer-orange{
     background-color: #ffffff;
 }
 
