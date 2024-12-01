@@ -14,7 +14,7 @@ export const JoinButton = () => {
   };
 
   return (
-    <WindowPanel text={"Dołącz do nas"} class_number={"4"}>
+    <WindowPanel text={"Dołącz do nas"} class_number={4}>
     <div className="join-button-container">
       <div className="join-text">Podoba ci się to, co widzisz?</div>
       <div className={`clip-path-circle1 ${hovered === true ? "hovered" : ""}`}>
